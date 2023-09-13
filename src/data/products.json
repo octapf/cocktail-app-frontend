@@ -1,0 +1,399 @@
+[
+	{
+		"id": 1,
+		"subId": 0,
+		"name": "Mojito",
+		"type": "cocktails",
+		"ingredients": [
+			{ "name": "Lime Wedges", "quantity": "4" },
+			{ "name": "Sugar Syrup", "quantity": "3/4 Oz" },
+			{ "name": "Mint Leaves", "quantity": "8 - 12" },
+			{ "name": "Light Rum", "quantity": "2 Oz" },
+			{ "name": "Soda", "quantity": "Fill" }
+		],
+		"method": "Muddle, Bash, Build, Churn",
+		"glass": "Highball",
+		"ice": "crashed",
+		"garnish": "Mint Sprig",
+		"optional": ["Fruit Mojito: add fruit and fruit liqueur"],
+		"price": 6
+	},
+	{
+		"id": 2,
+		"subId": 1,
+		"name": "Cuba Libre",
+		"type": "cocktails",
+		"ingredients": [
+			{ "name": "Light Rum", "quantity": "1 1/2 Oz" },
+			{ "name": "Fresh Lime Juice", "quantity": "1/2 Oz" },
+			{ "name": "Coca Cola", "quantity": "Fill" }
+		],
+		"method": "Build",
+		"glass": "Highball",
+		"ice": "Cubed",
+		"garnish": "Lime Wedge",
+		"optional": ["Cubata: Replace light rum with dark rum"],
+		"price": 6
+	},
+	{
+		"id": 3,
+		"subId": 2,
+		"name": "Gin & Tonic",
+		"type": "cocktails",
+		"ingredients": [
+			{ "name": "Gin", "quantity": "1 1/2 Oz" },
+			{ "name": "Tonic", "quantity": "Fill" }
+		],
+		"method": "Build",
+		"glass": "Highball",
+		"ice": "Cubed",
+		"garnish": "Lime Wedge",
+		"optional": ["Vodka & Tonic: Replace Gin with Vodka"],
+		"price": 6
+	},
+	{
+		"id": 4,
+		"subId": 3,
+		"name": "Sex on the beach",
+		"type": "cocktails",
+		"ingredients": [
+			{ "name": "Vodka", "quantity": "3/4 Oz" },
+			{ "name": "Peach Liqueur", "quantity": "3/4 Oz" },
+			{ "name": "Cranberry Juice", "quantity": "Fill equal parts" },
+			{ "name": "Orange Juice", "quantity": "Fill equal parts" }
+		],
+		"method": "Build",
+		"glass": "Highball",
+		"ice": "Cubed",
+		"garnish": "",
+		"optional": [],
+		"price": 6
+	},
+	{
+		"id": 5,
+		"subId": 4,
+		"name": "Tequila Sunrise",
+		"type": "cocktails",
+		"ingredients": [
+			{ "name": "Tequila", "quantity": "1 1/2 Oz" },
+			{ "name": "Orange Juice", "quantity": "Fill" },
+			{ "name": "Grenadine (Sink)", "quantity": "1/2 Oz" }
+		],
+		"method": "Build & Sink",
+		"glass": "Highball",
+		"ice": "Cubed",
+		"garnish": "",
+		"optional": [],
+		"price": 6
+	},
+	{
+		"id": 6,
+		"subId": 5,
+		"name": "Daiquiri",
+		"type": "cocktails",
+		"ingredients": [
+			{ "name": "Light Rum", "quantity": "1 1/2 Oz" },
+			{ "name": "Fresh Lime Juice", "quantity": "Fill" },
+			{ "name": "Sugar Syrup", "quantity": "Fill" }
+		],
+		"method": "Build",
+		"glass": "Highball",
+		"ice": "Cubed",
+		"garnish": "",
+		"optional": [],
+		"price": 6
+	},
+	{
+		"id": 7,
+		"subId": 6,
+		"name": "Margarita",
+		"type": "cocktails",
+		"ingredients": [
+			{ "name": "Tequila", "quantity": "1 1/2 Oz" },
+			{ "name": "Triple Sec", "quantity": "3/4 Oz" },
+			{ "name": "Fresh Lime Juice", "quantity": "1 Oz" },
+			{ "name": "Sugar Syrup", "quantity": "1/2 Oz" }
+		],
+		"method": "Shake & Fine Strain",
+		"glass": "Chilled Martini / Coupe",
+		"ice": "None",
+		"garnish": "Salt Rim (Half, Full or None)",
+		"optional": [
+			"Tommy's Margarita: Replace Triple Sec and sugar with Agave Syrup",
+			"Frozen Margarita: Add 1 scoop of crushed ice and double the sugar syrup"
+		],
+		"price": 6
+	},
+	{
+		"id": 8,
+		"subId": 7,
+		"name": "Piña Colada",
+		"type": "cocktails",
+		"ingredients": [
+			{ "name": "Light Rum", "quantity": "1 1/2 Oz" },
+			{ "name": "Coconut Liqueur", "quantity": "1/2 Oz" },
+			{ "name": "Fresh Lime Juice", "quantity": "1/2 Oz" },
+			{ "name": "Pineapple Juice", "quantity": "2 Oz" },
+			{ "name": "Coco Re'al Coconut Cream", "quantity": "1 1/2 Oz" }
+		],
+		"method": "Shake & Strain",
+		"glass": "Highball / Hurricane",
+		"ice": "Cubed",
+		"garnish": "Pineapple wedge & Cherry",
+		"optional": [],
+		"price": 6
+	},
+	{
+		"id": 9,
+		"subId": 8,
+		"name": "Caipirinha",
+		"type": "cocktails",
+		"ingredients": [
+			{ "name": "Lime Wedges", "quantity": "6 wedges" },
+			{ "name": "Sugar Syrup", "quantity": "3/4 Oz" },
+			{ "name": "Cachaça", "quantity": "2 Oz" }
+		],
+		"method": "Muddle, Build,Churn",
+		"glass": "Rocks",
+		"ice": "Crushed",
+		"garnish": "Lime Wedge",
+		"optional": [
+			"Fuit Caipirinha: Add fruit and fruit liqueur",
+			"Caipiroska: Replace Cachaça with Vodka"
+		],
+		"price": 6
+	},
+	{
+		"id": 10,
+		"subId": 9,
+		"name": "Godfather",
+		"type": "cocktails",
+		"ingredients": [
+			{ "name": "Grant's Scotch Whisky", "quantity": "1 Oz" },
+			{ "name": "Amaretto", "quantity": "1 Oz" }
+		],
+		"method": "Build",
+		"glass": "Rocks",
+		"ice": "Cubed",
+		"garnish": "None",
+		"optional": ["Godmother: Replace Scotch Whisky with Vodka"],
+		"price": 6
+	},
+	{
+		"id": 11,
+		"subId": 0,
+		"name": "Pizza",
+		"type": "food",
+		"optional": [
+			"Pepperonni",
+			"4 Cheeses",
+			"Carbonara",
+			"Vegetariana",
+			"Barbacoa",
+			"Ham and Cheese"
+		],
+		"price": 7
+	},
+	{
+		"id": 12,
+		"subId": 1,
+		"name": "Nachos",
+		"type": "food",
+		"optional": [""],
+		"price": 3
+	},
+	{
+		"id": 13,
+		"subId": 2,
+		"name": "Nachos Deluxe",
+		"type": "food",
+		"optional": [""],
+		"price": 6
+	},
+	{
+		"id": 14,
+		"subId": 3,
+		"name": "Nuggets",
+		"type": "food",
+		"optional": ["Chicken", "Vegetarian"],
+		"price": 3
+	},
+	{
+		"id": 15,
+		"subId": 4,
+		"name": "Burritos",
+		"type": "food",
+		"optional": ["Chicken-Avocado", "Vegan"],
+		"price": 6
+	},
+	{
+		"id": 16,
+		"subId": 0,
+		"name": "Coca Cola",
+		"type": "soft-drinks",
+		"price": 2
+	},
+	{
+		"id": 17,
+		"subId": 1,
+		"name": "Sprite",
+		"type": "soft-drinks",
+		"price": 2
+	},
+	{
+		"id": 18,
+		"subId": 2,
+		"name": "Fanta Orange",
+		"type": "soft-drinks",
+		"price": 2
+	},
+	{
+		"id": 19,
+		"subId": 3,
+		"name": "Fanta Lemon",
+		"type": "soft-drinks",
+		"price": 2
+	},
+	{
+		"id": 20,
+		"subId": 4,
+		"name": "Tonic",
+		"type": "soft-drinks",
+		"price": 2
+	},
+	{
+		"id": 21,
+		"subId": 5,
+		"name": "Orange Juice",
+		"type": "soft-drinks",
+		"price": 2
+	},
+	{
+		"id": 22,
+		"subId": 6,
+		"name": "Pineapple Juice",
+		"type": "soft-drinks",
+		"price": 2
+	},
+	{
+		"id": 23,
+		"subId": 7,
+		"name": "Peach Juice",
+		"type": "soft-drinks",
+		"price": 2
+	},
+	{
+		"id": 24,
+		"subId": 8,
+		"name": "Red Bull",
+		"type": "soft-drinks",
+		"price": 2
+	},
+	{ "id": 25, "subId": 0, "name": "Tap Beer", "type": "drinks", "price": 3.5 },
+	{ "id": 26, "subId": 1, "name": "Tap Beer XL", "type": "drinks", "price": 6 },
+	{ "id": 27, "subId": 2, "name": "Sangria", "type": "drinks", "price": 3.5 },
+	{ "id": 28, "subId": 3, "name": "Sangria XL", "type": "drinks", "price": 6 },
+	{ "id": 29, "subId": 4, "name": "Jagger Bomb", "type": "drinks", "price": 4 },
+	{ "id": 30, "subId": 5, "name": "Shot", "type": "drinks", "price": 2 },
+	{
+		"id": 31,
+		"subId": 6,
+		"name": "Jagger Shot",
+		"type": "drinks",
+		"price": 2.5
+	},
+	{ "id": 32, "subId": 7, "name": "Cubata", "type": "drinks", "price": 6 },
+	{
+		"id": 33,
+		"subId": 0,
+		"name": "Fresh Lemonade",
+		"type": "mocktails",
+		"ingredients": [
+			{ "name": "Fresh Lemon Juice", "quantity": "2 Oz" },
+			{ "name": "Sugar syrup", "quantity": "1 1/2 Oz" },
+			{ "name": "Soda", "quantity": "Fill" }
+		],
+		"method": "Build",
+		"glass": "Highball",
+		"ice": "Cubed",
+		"garnish": "Lemon Wedge",
+		"optional": ["Muddle Raspberries, Raspberry Garnish"],
+		"price": 6
+	},
+	{
+		"id": 34,
+		"subId": 1,
+		"name": "Arnold Palmer",
+		"type": "mocktails",
+		"ingredients": [
+			{ "name": "English Breakfast Tea (cold)", "quantity": "2 Oz" },
+			{ "name": "Fresh Lemon Juice", "quantity": "1 1/2 Oz" },
+			{ "name": "Sugar syrup", "quantity": "3/4" }
+		],
+		"method": "Build",
+		"glass": "Highball",
+		"ice": "Cubed",
+		"garnish": "Lemon Wedge",
+		"optional": [""],
+		"price": 6
+	},
+	{
+		"id": 35,
+		"subId": 2,
+		"name": "Virgin Mojito",
+		"type": "mocktails",
+		"ingredients": [
+			{ "name": "Lime Wedges", "quantity": "4 wedges" },
+			{ "name": "Sugar syrup", "quantity": "3/4 Oz" },
+			{ "name": "Fresh Lime Juice", "quantity": "3/4 Oz" },
+			{ "name": "Mint Leaves", "quantity": "8-12 leaves" },
+			{ "name": "Soda", "quantity": "Top" }
+		],
+		"method": "Muddle, Bash, Build, Churn",
+		"glass": "Highball",
+		"ice": "Cubed",
+		"garnish": "Mint Sprig",
+		"optional": [
+			"Fruit Virgin Mojito: Muddle chosen fruit or use Puree. Top with Apple Juice"
+		],
+		"price": 6
+	},
+	{
+		"id": 36,
+		"subId": 3,
+		"name": "Shirley Temple",
+		"type": "mocktails",
+		"ingredients": [
+			{ "name": "Granadine", "quantity": "3/4 Oz" },
+			{ "name": "Ginger Ale", "quantity": "Fill" }
+		],
+		"method": "Build",
+		"glass": "Highball",
+		"ice": "Cubed",
+		"garnish": "Cherry",
+		"optional": [
+			"Replace Ginger Ale with sprite and add 1 part of orange juice."
+		],
+		"price": 6
+	},
+	{
+		"id": 37,
+		"subId": 4,
+		"name": "Virgin Mary",
+		"type": "mocktails",
+		"ingredients": [
+			{ "name": "Tomato Juice", "quantity": "3 3/4 Oz" },
+			{ "name": "Worcestershire Sauce", "quantity": "3 Dashes" },
+			{ "name": "Tabasco", "quantity": "3 Dashes" },
+			{ "name": "Celery Salt", "quantity": "1 Pinch" },
+			{ "name": "Pepper", "quantity": "1 Pinch" },
+			{ "name": "Fresh Lime Juice", "quantity": "1/2 Oz" }
+		],
+		"method": "Roll & strain",
+		"glass": "Highball",
+		"ice": "Cubed/none",
+		"garnish": "Celery stick",
+		"optional": ["Black pepper rim & Lime wedge"],
+		"price": 6
+	}
+]
