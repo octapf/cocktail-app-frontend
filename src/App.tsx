@@ -1,13 +1,13 @@
 import Container from './components/Container'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Main from './components/Main'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 	return (
 		<Container typeContainer={'container-app'}>
 			<Header />
-			<Main />
+			<Outlet />
 			<Footer />
 		</Container>
 	)

@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import React from 'react'
 import endpoints from './constants/endpoints.ts'
 import ErrorPage from './components/Errorpage.tsx'
+import Maindetail from './components/Maindetail.tsx'
+import Mainlist from './components/Mainlist.tsx'
 
 const router = createBrowserRouter(
 	[
@@ -12,6 +14,10 @@ const router = createBrowserRouter(
 			path: endpoints.HOME,
 			element: <App />,
 			errorElement: <ErrorPage />,
+			children: [
+				{ path: endpoints.HOME, element: <Mainlist /> },
+				{ path: endpoints.COCKTAILS, element: <Maindetail /> },
+			],
 		},
 	],
 	{ basename: import.meta.env.DEV ? '/' : '/itacademy-sprint9-2/' }
