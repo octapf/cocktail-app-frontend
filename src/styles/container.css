@@ -7,6 +7,8 @@
 
 .container-app {
 	background-color: var(--color-one);
+	max-width: 1080px;
+	aspect-ratio: 20/9;
 }
 
 .mojito {

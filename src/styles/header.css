@@ -8,6 +8,7 @@
 .header {
 	display: flex;
 	place-content: center;
+	align-items: center;
 }
 
 .header h1 {
