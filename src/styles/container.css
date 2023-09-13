@@ -58,12 +58,13 @@
 }
 
 .product-card {
-	background-size: 400px;
+	background-size: 450px;
 	font-size: 1rem;
 	padding: 2rem;
 	color: var(--color-four);
 	letter-spacing: 0.8rem;
 	opacity: 0.7;
+	height: 7rem;
 }
 
 .product-card:hover {
