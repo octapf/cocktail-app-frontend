@@ -13,45 +13,65 @@
 
 .mojito {
 	background-image: url('../../public//mojito.jpg');
+	text-align: end;
 }
 .cubalibre {
 	background-image: url('../../public//cubalibre.jpg');
+	text-align: start;
 }
 .gintonic {
 	background-image: url('../../public//gintonic.jpg');
+	text-align: end;
 }
 .sexonthebeach {
 	background-image: url('../../public//sexonthebeach.jpg');
+	text-align: start;
 }
 .tequilasunrise {
 	background-image: url('../../public//tequilasunrise.jpg');
+	text-align: end;
 }
 .daiquiri {
 	background-image: url('../../public//daiquiri.jpg');
+	text-align: start;
 }
 .margarita {
 	background-image: url('../../public//margarita.jpg');
+	text-align: end;
 }
 .piñacolada {
 	background-image: url('../../public//piñacolada.jpg');
+	text-align: start;
 }
 .caipirinha {
 	background-image: url('../../public//caipirinha.jpg');
+	text-align: end;
 }
 .godfather {
 	background-image: url('../../public//godfather.jpg');
 }
-.lemonade {
-	background-image: url('../../public//lemonade.jpg');
+.freshlemonade {
+	background-image: url('../../public//freshlemonade.jpg');
+}
+.arnoldpalmer {
+	background-image: url('../../public//arnoldpalmer.jpg');
+}
+.virginmojito {
+	background-image: url('../../public//virginmojito.jpg');
+}
+.virginmary {
+	background-image: url('../../public//virginmary.jpg');
+}
+.shirleytemple {
+	background-image: url('../../public//shirleytemple.jpg');
 }
 
 .product-card {
-	background-size: 720px;
+	background-size: 1080px;
 	font-size: 1rem;
 	padding: 2rem;
 	color: var(--color-four);
 	letter-spacing: 1rem;
-	text-align: end;
 	opacity: 0.7;
 }
 

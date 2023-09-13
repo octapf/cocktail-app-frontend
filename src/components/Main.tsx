@@ -8,7 +8,7 @@ const Main = () => {
 	const productsContent = products.map((prod) => {
 		const productClass = prod.name.replace(/[\s&]/g, '').toLowerCase()
 		return (
-			<Container typeContainer={`${productClass} product-card`}>
+			<Container key={prod.id} typeContainer={`${productClass} product-card`}>
 				<h2>{prod.name}</h2>
 			</Container>
 		)

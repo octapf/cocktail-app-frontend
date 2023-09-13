@@ -6,9 +6,7 @@
 	--color-three: #ff2e63;
 	--color-four: #eaeaea;
 
-	margin: 0 auto;
 	text-align: center;
-	border: 1px solid red;
 	display: flex;
 	flex-direction: column;
 	place-content: start;
