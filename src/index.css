@@ -1,16 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
 :root {
+	--color-one: #252a34;
+	--color-two: #08d9d6;
+	--color-three: #ff2e63;
+	--color-four: #eaeaea;
+
 	max-width: 720px;
 	margin: 0 auto;
 	text-align: center;
 	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	place-content: start;
 
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: 'montserrat', sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
-	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -30,8 +38,6 @@ a:hover {
 
 body {
 	margin: 0;
-	display: flex;
-	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
 }

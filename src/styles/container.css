@@ -1,3 +1,14 @@
+:root {
+	--color-one: #252a34;
+	--color-two: #08d9d6;
+	--color-three: #ff2e63;
+	--color-four: #eaeaea;
+}
+
 .container-app {
-	border: 1px solid red;
+	background-color: var(--color-one);
+}
+
+.mojito {
+	background-color: red;
 }

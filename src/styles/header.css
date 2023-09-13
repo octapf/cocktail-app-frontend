@@ -1,0 +1,26 @@
+:root {
+	--color-one: #252a34;
+	--color-two: #08d9d6;
+	--color-three: #ff2e63;
+	--color-four: #eaeaea;
+}
+
+.header {
+	display: flex;
+	place-content: center;
+}
+
+.header h1 {
+	padding: 0;
+	letter-spacing: 1rem;
+	color: var(--color-four);
+}
+
+.logo {
+	height: 5rem;
+	margin: 1rem;
+}
+
+.logo-title {
+	font-size: 2.3rem;
+}
