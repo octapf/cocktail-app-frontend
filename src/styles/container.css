@@ -10,5 +10,49 @@
 }
 
 .mojito {
-	background-color: red;
+	background-image: url('../../public//mojito.jpg');
+}
+.cubalibre {
+	background-image: url('../../public//cubalibre.jpg');
+}
+.gintonic {
+	background-image: url('../../public//gintonic.jpg');
+}
+.sexonthebeach {
+	background-image: url('../../public//sexonthebeach.jpg');
+}
+.tequilasunrise {
+	background-image: url('../../public//tequilasunrise.jpg');
+}
+.daiquiri {
+	background-image: url('../../public//daiquiri.jpg');
+}
+.margarita {
+	background-image: url('../../public//margarita.jpg');
+}
+.piñacolada {
+	background-image: url('../../public//piñacolada.jpg');
+}
+.caipirinha {
+	background-image: url('../../public//caipirinha.jpg');
+}
+.godfather {
+	background-image: url('../../public//godfather.jpg');
+}
+.lemonade {
+	background-image: url('../../public//lemonade.jpg');
+}
+
+.product-card {
+	background-size: 720px;
+	font-size: 1rem;
+	padding: 2rem;
+	color: var(--color-four);
+	letter-spacing: 1rem;
+	text-align: end;
+	opacity: 0.7;
+}
+
+.product-card:hover {
+	opacity: 1;
 }
