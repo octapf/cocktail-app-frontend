@@ -14,7 +14,7 @@ const router = createBrowserRouter(
 			errorElement: <ErrorPage />,
 		},
 	],
-	{ basename: import.meta.env.DEV ? '/' : '/itacademy-sprint9/' }
+	{ basename: import.meta.env.DEV ? '/' : '/itacademy-sprint9-2/' }
 )
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
