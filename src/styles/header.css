@@ -10,19 +10,18 @@
 	flex-direction: column;
 	place-content: center;
 	align-items: center;
+	gap: 0.9rem;
+	padding: 0.9rem 0;
 }
 
 .header h1 {
+	margin: 0;
+	font-size: 0.7rem;
 	padding: 0;
-	letter-spacing: 1rem;
+	letter-spacing: 0.8rem;
 	color: var(--color-four);
 }
 
 .logo {
 	height: 5rem;
-	margin-top: 2rem;
-}
-
-.logo-title {
-	font-size: 2.3rem;
 }
