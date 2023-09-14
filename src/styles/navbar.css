@@ -15,10 +15,19 @@
 	color: var(--color-four);
 	left: 0;
 	right: 0;
+	font-size: 1.2rem;
+	gap: 5rem;
 	width: 20rem;
 	border-radius: 3rem;
-	padding: 2rem;
+	padding: 1.5rem 2rem;
 	position: fixed;
 	top: 40rem;
 	background-color: var(--color-five);
+}
+
+.navbar .fa-house,
+.navbar .fa-heart {
+	color: transparent;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: var(--color-four);
 }
