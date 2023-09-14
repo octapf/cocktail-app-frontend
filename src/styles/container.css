@@ -3,12 +3,41 @@
 	--color-two: #08d9d6;
 	--color-three: #ff2e63;
 	--color-four: #eaeaea;
+	--color-five: #1c1d21;
 }
 
 .container-app {
 	background-color: var(--color-one);
 	max-width: 1080px;
 	aspect-ratio: 20/9;
+}
+
+.container-cardlist {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	margin: 0 1rem;
+	padding-top: 9.5rem;
+}
+
+.container-card {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 24rem;
+	height: 12rem;
+	box-shadow: 10px 8px 10px var(--color-five);
+	border-radius: 15px 15px 0px 0px;
+	background-color: var(--color-five);
+	background-size: 24rem;
+	border-radius: 15px 15px 0px 0px;
+}
+
+.container-infocard {
+	display: flex;
+	place-content: center;
+	gap: 0.5rem;
+	background-color: var(--color-five);
+	opacity: 0.5;
 }
 
 .mojito {

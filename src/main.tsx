@@ -6,7 +6,8 @@ import React from 'react'
 import endpoints from './constants/endpoints.ts'
 import ErrorPage from './components/Errorpage.tsx'
 import Maindetail from './components/Maindetail.tsx'
-import Mainlist from './components/Mainlist.tsx'
+// import Mainlist from './components/Mainlist.tsx'
+import Cardlist from './components/Cardlist.tsx'
 
 const router = createBrowserRouter(
 	[
@@ -15,7 +16,7 @@ const router = createBrowserRouter(
 			element: <App />,
 			errorElement: <ErrorPage />,
 			children: [
-				{ path: endpoints.HOME, element: <Mainlist /> },
+				{ path: endpoints.HOME, element: <Cardlist /> },
 				{ path: endpoints.COCKTAILS, element: <Maindetail /> },
 			],
 		},

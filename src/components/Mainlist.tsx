@@ -3,7 +3,7 @@ import { GlobalContext } from './Provider'
 import Container from './Container'
 import { Link } from 'react-router-dom'
 
-const Main = () => {
+const Mainlist = () => {
 	const { products } = useContext(GlobalContext)
 
 	const productsContent = products.map((prod) => {
@@ -19,4 +19,4 @@ const Main = () => {
 	return <main className='main'>{productsContent}</main>
 }
 
-export default Main
+export default Mainlist

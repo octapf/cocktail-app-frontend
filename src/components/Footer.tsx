@@ -1,11 +1,6 @@
-import Navbar from './Navbar'
-
+import '../styles/footer.css'
 const Footer = () => {
-	return (
-		<footer>
-			<Navbar />
-		</footer>
-	)
+	return <footer className='footer'></footer>
 }
 
 export default Footer

@@ -4,7 +4,7 @@
 	--color-one: #252a34;
 	--color-two: #08d9d6;
 	--color-three: #ff2e63;
-	--color-four: #eaeaea;
+	--color-four: #d3d3d3;
 
 	text-align: center;
 	display: flex;
@@ -26,7 +26,7 @@
 
 a {
 	font-weight: 500;
-	color: #646cff;
+	color: var(--color-four);
 	text-decoration: inherit;
 }
 a:hover {

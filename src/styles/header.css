@@ -6,12 +6,23 @@
 }
 
 .header {
-	display: flex;
 	flex-direction: column;
-	place-content: center;
 	align-items: center;
-	gap: 0.9rem;
-	padding: 0.9rem 0;
+	gap: 1rem;
+	padding: 0.5rem 0;
+	z-index: 100;
+	display: flex;
+	border-radius: 0px 0px 25px 25px;
+	place-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	color: var(--color-four);
+	height: 7.5rem;
+	left: 0;
+	right: 0;
+	position: fixed;
+	top: 0;
+	background-color: var(--color-five);
 }
 
 .header h1 {
