@@ -8,7 +8,7 @@
 
 .container-app {
 	background-color: var(--color-one);
-	max-width: 21.5rem;
+	max-width: 26.4rem;
 	aspect-ratio: 20/9;
 }
 
@@ -23,12 +23,12 @@
 .container-card {
 	display: flex;
 	flex-direction: column-reverse;
-	width: 19rem;
+	width: 24.2rem;
 	height: 12rem;
 	box-shadow: 10px 8px 10px var(--color-five);
 	border-radius: 15px 15px 0px 0px;
 	background-color: var(--color-five);
-	background-size: 19rem;
+	background-size: 24.2rem;
 	border-radius: 15px 15px 0px 0px;
 }
 
