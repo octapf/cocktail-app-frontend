@@ -16,10 +16,10 @@
 	left: 0;
 	right: 0;
 	font-size: 1.2rem;
-	gap: 5rem;
-	width: 20rem;
+	gap: 1rem;
+	width: 19rem;
 	border-radius: 3rem;
-	padding: 1.5rem 2rem;
+	padding: 1.5rem 1rem;
 	position: fixed;
 	top: 40rem;
 	background-color: var(--color-five);
