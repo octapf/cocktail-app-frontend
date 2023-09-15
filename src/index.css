@@ -41,6 +41,7 @@ body {
 	color: var(--color-four);
 	left: 0;
 	right: 0;
+	background-color: var(--color-one);
 }
 
 button {
