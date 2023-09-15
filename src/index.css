@@ -12,6 +12,11 @@
 	font-family: 'montserrat', sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
+	width: 26.4rem;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 
 	color: rgba(255, 255, 255, 0.87);
 
@@ -36,12 +41,8 @@ body {
 	margin: 0;
 	min-width: 320px;
 	min-height: 100vh;
-	margin-left: auto;
-	margin-right: auto;
+
 	color: var(--color-four);
-	left: 0;
-	right: 0;
-	background-color: var(--color-one);
 }
 
 button {
