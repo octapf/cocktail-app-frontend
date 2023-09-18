@@ -41,49 +41,49 @@
 }
 
 .mojito {
-	background-image: url('../../public//mojito.jpg');
+	background-image: url('../assets/mojito.jpg');
 }
 .cubalibre {
-	background-image: url('../../public//cubalibre.jpg');
+	background-image: url('../assets/cubalibre.jpg');
 }
 .gintonic {
-	background-image: url('../../public//gintonic.jpg');
+	background-image: url('../assets/gintonic.jpg');
 }
 .sexonthebeach {
-	background-image: url('../../public//sexonthebeach.jpg');
+	background-image: url('../assets/sexonthebeach.jpg');
 }
 .tequilasunrise {
-	background-image: url('../../public//tequilasunrise.jpg');
+	background-image: url('../assets/tequilasunrise.jpg');
 }
 .daiquiri {
-	background-image: url('../../public//daiquiri.jpg');
+	background-image: url('../assets/daiquiri.jpg');
 }
 .margarita {
-	background-image: url('../../public//margarita.jpg');
+	background-image: url('../assets/margarita.jpg');
 }
 .piñacolada {
-	background-image: url('../../public//piñacolada.jpg');
+	background-image: url('../assets/piñacolada.jpg');
 }
 .caipirinha {
-	background-image: url('../../public//caipirinha.jpg');
+	background-image: url('../assets/caipirinha.jpg');
 }
 .godfather {
-	background-image: url('../../public//godfather.jpg');
+	background-image: url('../assets/godfather.jpg');
 }
 .freshlemonade {
-	background-image: url('../../public//freshlemonade.jpg');
+	background-image: url('../assets/freshlemonade.jpg');
 }
 .arnoldpalmer {
 	background-image: url('../assets/arnoldpalmer.jpg');
 }
 .virginmojito {
-	background-image: url('../../public//virginmojito.jpg');
+	background-image: url('../assets/virginmojito.jpg');
 }
 .virginmary {
-	background-image: url('../../public//virginmary.jpg');
+	background-image: url('../assets/virginmary.jpg');
 }
 .shirleytemple {
-	background-image: url('../../public//shirleytemple.jpg');
+	background-image: url('../assets/shirleytemple.jpg');
 }
 
 .product-card {

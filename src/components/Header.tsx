@@ -1,4 +1,5 @@
-import logo from '../../public/logo-uh.svg'
+import logo from '../assets/logo-uh.svg'
+
 import '../styles/header.css'
 
 const Header = () => {
