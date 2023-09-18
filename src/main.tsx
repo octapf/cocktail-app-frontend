@@ -5,9 +5,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import React from 'react'
 import endpoints from './constants/endpoints.ts'
 import ErrorPage from './components/Errorpage.tsx'
-import Maindetail from './components/Maindetail.tsx'
+import CardDetail from './components/CardDetail.tsx'
 // import Mainlist from './components/Mainlist.tsx'
 import Cardlist from './components/Cardlist.tsx'
+import Home from './components/Home.tsx'
+import Profile from './components/Profile.tsx'
 
 const router = createBrowserRouter(
 	[
@@ -16,8 +18,10 @@ const router = createBrowserRouter(
 			element: <App />,
 			errorElement: <ErrorPage />,
 			children: [
-				{ path: endpoints.HOME, element: <Cardlist /> },
-				{ path: endpoints.COCKTAILS, element: <Maindetail /> },
+				{ path: endpoints.HOME, element: <Home /> },
+				{ path: endpoints.COCKTAIL_LIST, element: <Cardlist /> },
+				{ path: endpoints.PROFILE, element: <Profile /> },
+				{ path: endpoints.COCKTAIL, element: <CardDetail /> },
 			],
 		},
 	],
