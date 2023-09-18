@@ -12,7 +12,8 @@ function App() {
 	if (location.pathname == endpoints.HOME) {
 		return (
 			<>
-				<Container typeContainer={'container-home'}>
+				<div className='background-home'></div>
+				<Container typeContainer='container-home'>
 					<Outlet />
 				</Container>
 			</>
