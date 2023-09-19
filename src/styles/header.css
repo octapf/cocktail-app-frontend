@@ -3,6 +3,7 @@
 	--color-two: #08d9d6;
 	--color-three: #ff2e63;
 	--color-four: #eaeaea;
+	--width-app: 26.2rem;
 }
 
 .header {
@@ -12,7 +13,7 @@
 	padding: 0.5rem 0;
 	z-index: 100;
 	display: flex;
-	width: 26.3rem;
+	width: var(--width-app);
 	border-radius: 0px 0px 25px 25px;
 	place-content: center;
 	margin-left: auto;
