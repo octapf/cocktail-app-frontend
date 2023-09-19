@@ -92,6 +92,12 @@
 	flex-wrap: wrap;
 	place-content: center;
 	row-gap: 3rem;
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0;
+	right: 0;
+	background-color: var(--color-one);
 }
 
 .container-card {
@@ -101,7 +107,6 @@
 	height: 12rem;
 	box-shadow: 10px 8px 10px var(--color-five);
 	border-radius: 15px 15px 0px 0px;
-	background-color: var(--color-five);
 	background-size: 23rem;
 }
 
