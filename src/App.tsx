@@ -13,7 +13,7 @@ function App() {
 		return (
 			<>
 				<div className='background-home'></div>
-				<Container typeContainer='container-home'>
+				<Container typeContainer='contanier-logo'>
 					<Outlet />
 				</Container>
 			</>

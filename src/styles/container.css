@@ -22,7 +22,7 @@
 
 .background-home {
 	background-image: url('../assets/home.jpg');
-	width: 100%;
+	width: 26.3rem;
 	height: 120%;
 	position: absolute;
 	top: 0;
@@ -39,7 +39,7 @@
 	background-size: cover;
 }
 
-.container-home {
+.contanier-logo {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -55,7 +55,7 @@
 	height: 100%;
 }
 
-.container-home:before {
+.contanier-logo:before {
 	content: '';
 	position: absolute;
 	top: 0;
