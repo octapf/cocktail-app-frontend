@@ -8,16 +8,6 @@
 }
 
 .container-app {
-	background-color: var(--color-one);
-	max-width: var(--width-app);
-	padding-top: 9.5rem;
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	margin-right: auto;
-	margin-left: auto;
-	left: 0;
-	right: 0;
 }
 
 .background-home {
@@ -73,7 +63,7 @@
 @keyframes shine {
 	0% {
 		left: -300px;
-		background: rgba(255, 255, 255, 0.6);
+		background: rgba(255, 255, 255, 0.8);
 		transform: skewX(-30deg);
 	}
 
@@ -100,7 +90,8 @@
 	left: 0;
 	right: 0;
 	background-color: var(--color-one);
-	padding-bottom: 9rem;
+	padding-top: 9.5rem;
+	padding-bottom: 8rem;
 }
 
 .container-card {
@@ -109,7 +100,25 @@
 	width: 23rem;
 	height: 12rem;
 	box-shadow: 10px 8px 10px var(--color-five);
+	border-radius: 5px;
 	background-size: 23rem;
+}
+
+.container-card-detail {
+	display: flex;
+	flex-wrap: wrap;
+	place-content: center;
+	width: var(--width-app);
+	row-gap: 1.5rem;
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0;
+	right: 0;
+	background-size: 1280px;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top: 8.5rem;
 }
 
 .container-infocard {
@@ -118,14 +127,6 @@
 	column-gap: 0.5rem;
 	background-color: rgba(43, 43, 43, 0.4);
 }
-
-/* .background-infocard { */
-/* position: relative; */
-/* background-color: red; */
-/* height: 2rem; */
-/* opacity: 0.5; */
-/* top: 0; */
-/* } */
 
 .mojito {
 	background-image: url('../assets/mojito.jpg');

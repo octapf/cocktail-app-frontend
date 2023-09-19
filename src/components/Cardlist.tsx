@@ -9,9 +9,8 @@ const Cardlist = () => {
 	const { products } = useContext(GlobalContext)
 
 	const productsContent = products.map((prod) => {
-		const productClass = prod.name.replace(/[\s&]/g, '').toLowerCase()
 		return (
-			<Link key={prod.id} to={`${endpoints.COCKTAIL_LIST}/${productClass}`}>
+			<Link key={prod.id} to={`${endpoints.COCKTAIL_LIST}/${prod.id}`}>
 				<Card product={prod} />
 			</Link>
 		)
