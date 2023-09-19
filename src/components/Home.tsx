@@ -7,6 +7,7 @@ const Home = () => {
 		<>
 			<Link to={endpoints.COCKTAIL_LIST}>
 				<img className='logo-home' src={logo} alt='logo' />
+				<h1>ASDASDSD</h1>
 			</Link>
 		</>
 	)
