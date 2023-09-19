@@ -9,7 +9,6 @@
 .container-app {
 	background-color: var(--color-one);
 	max-width: 26.3rem;
-	aspect-ratio: 20/9;
 	padding-top: 9.5rem;
 	display: flex;
 	flex-direction: column;
@@ -92,8 +91,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	place-content: center;
-	width: 26.3rem;
-	gap: 3rem;
+	row-gap: 3rem;
 }
 
 .container-card {
@@ -105,13 +103,12 @@
 	border-radius: 15px 15px 0px 0px;
 	background-color: var(--color-five);
 	background-size: 23rem;
-	border-radius: 15px 15px 0px 0px;
 }
 
 .container-infocard {
 	display: flex;
 	place-content: center;
-	gap: 0.5rem;
+	row-gap: 0.5rem;
 	background-color: var(--color-five);
 	opacity: 0.5;
 }
@@ -160,18 +157,4 @@
 }
 .shirleytemple {
 	background-image: url('../assets/shirleytemple.jpg');
-}
-
-.product-card {
-	background-size: 450px;
-	font-size: 1rem;
-	padding: 2rem;
-	color: var(--color-four);
-	letter-spacing: 0.8rem;
-	opacity: 0.7;
-	height: 7rem;
-}
-
-.product-card:hover {
-	opacity: 1;
 }
