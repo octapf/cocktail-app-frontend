@@ -23,7 +23,7 @@
 .background-home {
 	background-image: url('../assets/home.jpg');
 	width: var(--width-app);
-	height: 120%;
+	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -64,7 +64,7 @@
 	height: 100%;
 	background: rgba(255, 255, 255, 0.3);
 	transform: skewX(-30deg);
-	animation-duration: 2s;
+	animation-duration: 1.5s;
 	animation-name: shine;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
