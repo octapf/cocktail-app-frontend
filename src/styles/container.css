@@ -4,11 +4,12 @@
 	--color-three: #ff2e63;
 	--color-four: #eaeaea;
 	--color-five: #1c1d21;
+	--width-app: 26.3rem;
 }
 
 .container-app {
 	background-color: var(--color-one);
-	max-width: 26.3rem;
+	max-width: var(--width-app);
 	padding-top: 9.5rem;
 	display: flex;
 	flex-direction: column;
@@ -21,7 +22,7 @@
 
 .background-home {
 	background-image: url('../assets/home.jpg');
-	width: 26.3rem;
+	width: var(--width-app);
 	height: 120%;
 	position: absolute;
 	top: 0;
@@ -91,13 +92,15 @@
 	display: flex;
 	flex-wrap: wrap;
 	place-content: center;
-	row-gap: 3rem;
+	width: var(--width-app);
+	row-gap: 1.5rem;
 	position: absolute;
 	margin-right: auto;
 	margin-left: auto;
 	left: 0;
 	right: 0;
 	background-color: var(--color-one);
+	padding-bottom: 9rem;
 }
 
 .container-card {
@@ -113,7 +116,7 @@
 .container-infocard {
 	display: flex;
 	place-content: center;
-	row-gap: 0.5rem;
+	column-gap: 0.5rem;
 	background-color: var(--color-five);
 	opacity: 0.5;
 }

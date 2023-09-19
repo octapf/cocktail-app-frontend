@@ -5,6 +5,7 @@
 	--color-two: #08d9d6;
 	--color-three: #ff2e63;
 	--color-four: #d3d3d3;
+	--width-app: 26.3rem;
 
 	text-align: center;
 	display: flex;
@@ -36,11 +37,6 @@ body {
 	margin: 0;
 	min-width: 320px;
 	min-height: 100vh;
-	width: 26.3rem;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
 	color: var(--color-four);
 }
 
