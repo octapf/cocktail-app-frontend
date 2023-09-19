@@ -6,6 +6,7 @@ const Card = ({ product }: ICard) => {
 
 	return (
 		<Container typeContainer={`container-card ${productClass}`}>
+			<div className='background-infocard'></div>
 			<Container typeContainer={'container-infocard'}>
 				<h5>{product.name}</h5>
 				<h5>€ {product.price}</h5>

@@ -109,7 +109,6 @@
 	width: 23rem;
 	height: 12rem;
 	box-shadow: 10px 8px 10px var(--color-five);
-	border-radius: 15px 15px 0px 0px;
 	background-size: 23rem;
 }
 
@@ -117,9 +116,16 @@
 	display: flex;
 	place-content: center;
 	column-gap: 0.5rem;
-	background-color: var(--color-five);
-	opacity: 0.5;
+	background-color: rgba(43, 43, 43, 0.4);
 }
+
+/* .background-infocard { */
+/* position: relative; */
+/* background-color: red; */
+/* height: 2rem; */
+/* opacity: 0.5; */
+/* top: 0; */
+/* } */
 
 .mojito {
 	background-image: url('../assets/mojito.jpg');
