@@ -92,6 +92,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	place-content: center;
+	width: 26.3rem;
 	gap: 3rem;
 }
 
