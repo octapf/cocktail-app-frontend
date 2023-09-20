@@ -116,21 +116,51 @@
 	flex-wrap: wrap;
 	place-content: center;
 	width: 100%;
-	row-gap: 1.5rem;
 	position: absolute;
 	margin-right: auto;
 	margin-left: auto;
 	left: 0;
+	height: 100%;
 	right: 0;
-	background-size: 1280px;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	padding-top: 8.5rem;
+}
+
+.container-card-detail .card-detail-maintitle {
+	letter-spacing: 1.2rem;
+	line-height: normal;
+	font-size: 3rem;
+	box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 100%;
+	padding: 1rem 0;
+}
+
+.container-card-detail .card-detail-title {
+	letter-spacing: 0.3rem;
+	width: 100%;
+}
+
+.container-card-detail .card-detail-history {
+	font-style: italic;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 1rem;
+}
+.card-detail-ingredients {
+	display: flex;
+	padding: 0.3rem 0;
+	place-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	font-weight: 600;
 }
 
 .container-infocard {
 	display: flex;
 	place-content: center;
+	font-size: 1rem;
+	letter-spacing: 0.2rem;
 	column-gap: 0.5rem;
 	background-color: rgba(43, 43, 43, 0.4);
 }

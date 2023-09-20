@@ -16,7 +16,8 @@
 		"ice": "crashed",
 		"garnish": "Mint Sprig",
 		"optional": ["Fruit Mojito: add fruit and fruit liqueur"],
-		"price": 6
+		"price": 6,
+		"history": "The history of the Mojito is a bit harder to trace. It is said that the original Mojito was a medicinal drink to curb disease on the island of Cuba. A moon shine rum-type alcohol was mixed with mint, lime, and sugar cane syrup to ward off illness."
 	},
 	{
 		"id": 2,
@@ -33,7 +34,8 @@
 		"ice": "Cubed",
 		"garnish": "Lime Wedge",
 		"optional": ["Cubata: Replace light rum with dark rum"],
-		"price": 6
+		"price": 6,
+		"history": "The drink was created in Cuba in the early 1900s, but its exact origins are not certain. It became popular when bottled Coca-Cola was first imported into Cuba from the United States. Its origin is associated with the heavy U.S. presence in Cuba following the Spanish-American War of 1898; the drink's traditional name, 'Cuba libre' (Free Cuba), was the slogan of the Cuban independence movement. The Cuba libre is sometimes said to have been created during the Spanish-American War. A drink called a 'Cuba libre' was indeed known in 1898, but this was a mix of water and brown sugar."
 	},
 	{
 		"id": 3,
