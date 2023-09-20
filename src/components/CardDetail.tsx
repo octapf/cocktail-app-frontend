@@ -10,15 +10,15 @@ const CardDetail = () => {
 
 	let filteredProduct
 	if (id) {
-		console.log(id)
-
 		filteredProduct = products.filter((prod) => prod.id == parseInt(id))[0]
 
-		const productIngredients = filteredProduct.ingredients.map((ingredient) => (
-			<small className={'card-detail-ingredients'}>
-				{ingredient.quantity} {ingredient.name}
-			</small>
-		))
+		const productIngredients = filteredProduct.ingredients.map(
+			(ingredient, i) => (
+				<small key={i} className={'card-detail-ingredients'}>
+					{ingredient.quantity} {ingredient.name}
+				</small>
+			)
+		)
 
 		const productClass = filteredProduct.name
 			.replace(/[\s&]/g, '')
