@@ -4,15 +4,11 @@
 	--color-three: #ff2e63;
 	--color-four: #eaeaea;
 	--color-five: #1c1d21;
-	--width-app: 26.2rem;
-}
-
-.container-app {
 }
 
 .background-home {
 	background-image: url('../assets/home.jpg');
-	width: var(--width-app);
+	width: 100%;
 	height: 100%;
 	position: absolute;
 	top: 0;
@@ -29,13 +25,17 @@
 	background-size: cover;
 }
 
+.container-app {
+	width: 100%;
+}
+
 .contanier-logo {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 170px;
-	height: 170px;
+	width: 10.5rem;
+	height: 10.5rem;
 	overflow: hidden;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 }
@@ -80,9 +80,9 @@
 
 .container-cardlist {
 	display: flex;
-	flex-wrap: wrap;
-	place-content: center;
-	width: var(--width-app);
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 	row-gap: 1.5rem;
 	position: absolute;
 	margin-right: auto;
@@ -94,21 +94,28 @@
 	padding-bottom: 8rem;
 }
 
+.container-cardlist a {
+	width: 90%;
+}
+
 .container-card {
+	align-self: center;
+	justify-self: center;
+	place-self: center;
 	display: flex;
 	flex-direction: column-reverse;
-	width: 23rem;
-	height: 12rem;
+	width: 100%;
+	height: 11.7rem;
 	box-shadow: 10px 8px 10px var(--color-five);
 	border-radius: 5px;
-	background-size: 23rem;
+	background-size: 100%;
 }
 
 .container-card-detail {
 	display: flex;
 	flex-wrap: wrap;
 	place-content: center;
-	width: var(--width-app);
+	width: 100%;
 	row-gap: 1.5rem;
 	position: absolute;
 	margin-right: auto;
