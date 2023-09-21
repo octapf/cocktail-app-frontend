@@ -147,13 +147,13 @@
 
 .history-container {
 	display: flex;
-	padding: 1.5rem;
+	padding: 2rem 1.5rem;
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .container-card-detail .card-detail-history {
 	font-style: italic;
-	height: 6rem;
+	height: 8rem;
 	overflow-y: scroll;
 }
 
@@ -166,11 +166,11 @@
 	font-weight: 500;
 	gap: 0.5rem;
 	place-content: center;
-	/* border: 1px solid red; */
 }
 
 .ingredient-text {
 	width: 40%;
+	font-size: 0.8rem;
 }
 
 .container-infocard {

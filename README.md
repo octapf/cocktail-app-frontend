@@ -8,3 +8,4 @@ TODO fix image sizes
 TODO add history of each product
 TODO make history textArea to put more info?
 TODO add steps to make the cocktail?
+TODO fix scrollbar
