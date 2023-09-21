@@ -140,20 +140,37 @@
 .container-card-detail .card-detail-title {
 	letter-spacing: 0.3rem;
 	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	margin-bottom: 0;
+	padding: 1rem 0;
+}
+
+.history-container {
+	display: flex;
+	padding: 1.5rem;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .container-card-detail .card-detail-history {
 	font-style: italic;
-	background-color: rgba(0, 0, 0, 0.3);
-	padding: 1rem;
+	height: 6rem;
+	overflow-y: scroll;
 }
+
 .card-detail-ingredients {
 	display: flex;
-	padding: 0.3rem 0;
-	place-content: center;
 	flex-wrap: wrap;
+	padding: 0.5rem 0;
 	width: 100%;
-	font-weight: 600;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-weight: 500;
+	gap: 0.5rem;
+	place-content: center;
+	/* border: 1px solid red; */
+}
+
+.ingredient-text {
+	width: 40%;
 }
 
 .container-infocard {

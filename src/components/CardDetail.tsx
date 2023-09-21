@@ -14,7 +14,7 @@ const CardDetail = () => {
 
 		const productIngredients = filteredProduct.ingredients.map(
 			(ingredient, i) => (
-				<small key={i} className={'card-detail-ingredients'}>
+				<small className={'ingredient-text'} key={i}>
 					{ingredient.quantity} {ingredient.name}
 				</small>
 			)
@@ -29,11 +29,15 @@ const CardDetail = () => {
 				<h1 className='card-detail-maintitle'>
 					{filteredProduct.name.toUpperCase()}
 				</h1>
-				<small
-					className={'card-detail-history'}
-				>{`"${filteredProduct.history}"`}</small>
+				<div className={'history-container'}>
+					<small
+						className={'card-detail-history'}
+					>{`"${filteredProduct.history}"`}</small>
+				</div>
 				<h4 className={'card-detail-title'}>INGREDIENTS</h4>
-				{productIngredients}
+				<small className={'card-detail-ingredients'}>
+					{productIngredients}
+				</small>
 			</Container>
 		)
 	}

@@ -6,3 +6,5 @@ TODO fix font weight in app
 TODO fix all position absolute in app?
 TODO fix image sizes
 TODO add history of each product
+TODO make history textArea to put more info?
+TODO add steps to make the cocktail?
