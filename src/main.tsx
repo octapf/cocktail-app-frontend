@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { GoogleOAuthProvider } from '@react-oauth/google'
 import React from 'react'
 import endpoints from './constants/endpoints.ts'
 import ErrorPage from './components/Errorpage.tsx'
@@ -28,7 +29,9 @@ const router = createBrowserRouter(
 )
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-	<React.StrictMode>
-		<RouterProvider router={router}></RouterProvider>
-	</React.StrictMode>
+	<GoogleOAuthProvider clientId='370152876277-6ert57it0lm7dt6bmphejdmqvsgcphk9.apps.googleusercontent.com'>
+		<React.StrictMode>
+			<RouterProvider router={router}></RouterProvider>
+		</React.StrictMode>
+	</GoogleOAuthProvider>
 )
