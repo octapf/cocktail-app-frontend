@@ -3,14 +3,14 @@ import { GlobalContext } from './Provider'
 import { Link } from 'react-router-dom'
 import Card from './Card'
 import Container from './Container'
+import endpoints from '../constants/endpoints'
 
 const Cardlist = () => {
 	const { products } = useContext(GlobalContext)
 
 	const productsContent = products.map((prod) => {
-		const productClass = prod.name.replace(/[\s&]/g, '').toLowerCase()
 		return (
-			<Link key={prod.id} to={`/${productClass}`}>
+			<Link key={prod.id} to={`${endpoints.COCKTAIL_LIST}/${prod.id}`}>
 				<Card product={prod} />
 			</Link>
 		)

@@ -1,24 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
 :root {
 	--color-one: #252a34;
 	--color-two: #08d9d6;
 	--color-three: #ff2e63;
 	--color-four: #d3d3d3;
+	--width-app: 26.2rem;
 
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	font-family: 'montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	line-height: 1.5;
-	font-weight: 400;
-	width: 26.4rem;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
 
-	color: rgba(255, 255, 255, 0.87);
+	font-weight: normal;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -28,7 +21,6 @@
 }
 
 a {
-	font-weight: 500;
 	color: var(--color-four);
 	text-decoration: inherit;
 }
@@ -40,9 +32,17 @@ a:hover {
 body {
 	margin: 0;
 	min-width: 320px;
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0;
+	z-index: -3;
+	right: 0;
+	width: var(--width-app);
+	background-color: var(--color-one);
+	max-height: 100vh;
 	min-height: 100vh;
-
-	color: var(--color-four);
+	color: #fff;
 }
 
 button {
@@ -50,8 +50,6 @@ button {
 	border: 1px solid transparent;
 	padding: 0.6em 1.2em;
 	font-size: 1em;
-	font-weight: 500;
-	font-family: inherit;
 	background-color: #1a1a1a;
 	cursor: pointer;
 	transition: border-color 0.25s;
@@ -69,9 +67,7 @@ button:focus-visible {
 		color: #213547;
 		background-color: #ffffff;
 	}
-	a:hover {
-		color: #747bff;
-	}
+
 	button {
 		background-color: #f9f9f9;
 	}

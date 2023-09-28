@@ -3,17 +3,18 @@
 	--color-two: #08d9d6;
 	--color-three: #ff2e63;
 	--color-four: #eaeaea;
+	--width-app: 26.2rem;
 }
 
 .header {
+	width: var(--width-app);
 	flex-direction: column;
 	align-items: center;
-	gap: 1rem;
+	row-gap: 1rem;
 	padding: 0.5rem 0;
 	z-index: 100;
 	display: flex;
-	width: 26.4rem;
-	border-radius: 0px 0px 25px 25px;
+	border-radius: 0px 0px 15px 15px;
 	place-content: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -34,6 +35,10 @@
 	color: var(--color-four);
 }
 
-.logo {
+.logo-navbar {
 	height: 5rem;
+}
+
+.header-detailpage {
+	height: 3rem;
 }

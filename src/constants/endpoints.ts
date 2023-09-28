@@ -1,6 +1,8 @@
 enum endpoints {
 	HOME = '/',
-	COCKTAILS = '/:id',
+	COCKTAIL_LIST = '/cocktailist',
+	COCKTAIL = '/cocktailist/:id',
+	PROFILE = '/profile',
 }
 
 export default endpoints

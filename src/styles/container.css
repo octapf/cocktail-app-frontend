@@ -6,96 +6,224 @@
 	--color-five: #1c1d21;
 }
 
+.background-home {
+	background-image: url('../assets/home.jpg');
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: -1;
+	filter: blur(6px);
+	background-color: rgba(43, 37, 31, 0.5);
+	background-blend-mode: multiply;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .container-app {
-	background-color: var(--color-one);
-	max-width: 26.4rem;
-	aspect-ratio: 20/9;
+	width: 100%;
+}
+
+.contanier-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 10.5rem;
+	height: 10.5rem;
+	overflow: hidden;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.logo-home {
+	width: 100%;
+	height: 100%;
+}
+
+.contanier-logo:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -300px;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.3);
+	transform: skewX(-30deg);
+	animation-duration: 1.5s;
+	animation-name: shine;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes shine {
+	0% {
+		left: -300px;
+		background: rgba(255, 255, 255, 0.8);
+		transform: skewX(-30deg);
+	}
+
+	40% {
+		left: 250px;
+		background: rgba(255, 255, 255, 0.2);
+	}
+
+	100% {
+		left: 250px;
+		background: rgba(255, 255, 255, 0.2);
+	}
 }
 
 .container-cardlist {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 3rem;
-	margin: 0 1rem;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	row-gap: 1.5rem;
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0;
+	right: 0;
+	background-color: var(--color-one);
 	padding-top: 9.5rem;
+	padding-bottom: 8rem;
+}
+
+.container-cardlist a {
+	width: 90%;
 }
 
 .container-card {
+	align-self: center;
+	justify-self: center;
+	place-self: center;
 	display: flex;
 	flex-direction: column-reverse;
-	width: 23.8rem;
-	height: 12rem;
+	width: 100%;
+	height: 11.7rem;
 	box-shadow: 10px 8px 10px var(--color-five);
-	border-radius: 15px 15px 0px 0px;
-	background-color: var(--color-five);
-	background-size: 23.8rem;
-	border-radius: 15px 15px 0px 0px;
+	border-radius: 5px;
+	background-size: 100%;
+}
+
+.container-card-detail {
+	display: flex;
+	flex-wrap: wrap;
+	place-content: center;
+	width: 100%;
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0;
+	height: 100%;
+	right: 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.container-card-detail .card-detail-maintitle {
+	letter-spacing: 1.2rem;
+	line-height: normal;
+	font-size: 3rem;
+	box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 100%;
+	padding: 1rem 0;
+}
+
+.container-card-detail .card-detail-title {
+	letter-spacing: 0.3rem;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	margin-bottom: 0;
+	padding: 1rem 0;
+}
+
+.history-container {
+	display: flex;
+	padding: 2rem 1.5rem;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container-card-detail .card-detail-history {
+	font-style: italic;
+	height: 8rem;
+	overflow-y: scroll;
+}
+
+.card-detail-ingredients {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0.5rem 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-weight: 500;
+	gap: 0.5rem;
+	place-content: center;
+}
+
+.ingredient-text {
+	width: 40%;
+	font-size: 0.8rem;
 }
 
 .container-infocard {
 	display: flex;
 	place-content: center;
-	gap: 0.5rem;
-	background-color: var(--color-five);
-	opacity: 0.5;
+	font-size: 1rem;
+	letter-spacing: 0.2rem;
+	column-gap: 0.5rem;
+	background-color: rgba(43, 43, 43, 0.4);
 }
 
 .mojito {
-	background-image: url('../../public//mojito.jpg');
+	background-image: url('../assets/mojito.jpg');
 }
 .cubalibre {
-	background-image: url('../../public//cubalibre.jpg');
+	background-image: url('../assets/cubalibre.jpg');
 }
 .gintonic {
-	background-image: url('../../public//gintonic.jpg');
+	background-image: url('../assets/gintonic.jpg');
 }
 .sexonthebeach {
-	background-image: url('../../public//sexonthebeach.jpg');
+	background-image: url('../assets/sexonthebeach.jpg');
 }
 .tequilasunrise {
-	background-image: url('../../public//tequilasunrise.jpg');
+	background-image: url('../assets/tequilasunrise.jpg');
 }
 .daiquiri {
-	background-image: url('../../public//daiquiri.jpg');
+	background-image: url('../assets/daiquiri.jpg');
 }
 .margarita {
-	background-image: url('../../public//margarita.jpg');
+	background-image: url('../assets/margarita.jpg');
 }
 .piñacolada {
-	background-image: url('../../public//piñacolada.jpg');
+	background-image: url('../assets/piñacolada.jpg');
 }
 .caipirinha {
-	background-image: url('../../public//caipirinha.jpg');
+	background-image: url('../assets/caipirinha.jpg');
 }
 .godfather {
-	background-image: url('../../public//godfather.jpg');
+	background-image: url('../assets/godfather.jpg');
 }
 .freshlemonade {
-	background-image: url('../../public//freshlemonade.jpg');
+	background-image: url('../assets/freshlemonade.jpg');
 }
 .arnoldpalmer {
-	background-image: url('../../public//arnoldpalmer.jpg');
+	background-image: url('../assets/arnoldpalmer.jpg');
 }
 .virginmojito {
-	background-image: url('../../public//virginmojito.jpg');
+	background-image: url('../assets/virginmojito.jpg');
 }
 .virginmary {
-	background-image: url('../../public//virginmary.jpg');
+	background-image: url('../assets/virginmary.jpg');
 }
 .shirleytemple {
-	background-image: url('../../public//shirleytemple.jpg');
-}
-
-.product-card {
-	background-size: 450px;
-	font-size: 1rem;
-	padding: 2rem;
-	color: var(--color-four);
-	letter-spacing: 0.8rem;
-	opacity: 0.7;
-	height: 7rem;
-}
-
-.product-card:hover {
-	opacity: 1;
+	background-image: url('../assets/shirleytemple.jpg');
 }
