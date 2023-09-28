@@ -10,7 +10,7 @@ const CardDetail = () => {
 
 	let filteredProduct
 	if (id) {
-		filteredProduct = products.filter((prod) => prod.id == parseInt(id))[0]
+		filteredProduct = products.filter((prod) => prod._id == id)[0]
 
 		const productIngredients = filteredProduct.ingredients.map(
 			(ingredient, i) => (
@@ -41,8 +41,6 @@ const CardDetail = () => {
 			</Container>
 		)
 	}
-
-	console.log(filteredProduct)
 }
 
 export default CardDetail
