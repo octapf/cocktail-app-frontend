@@ -45,10 +45,7 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
 
 	useEffect(() => {
 		const fetchProducts = async () => {
-			const response = await fetch(`${URL_PRODUCTS}`, {
-				mode: 'cors',
-				credentials: 'include',
-			})
+			const response = await fetch(`${URL_PRODUCTS}`)
 
 			const data = await response.json()
 
