@@ -42,7 +42,10 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
 
 	useEffect(() => {
 		const fetchProducts = async () => {
-			const response = await fetch('http://localhost:3001/products')
+			const response = await fetch('http://localhost:3001/products', {
+				mode: 'cors',
+				credentials: 'include',
+			})
 
 			const data = await response.json()
 
