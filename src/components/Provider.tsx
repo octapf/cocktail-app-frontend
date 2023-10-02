@@ -23,6 +23,9 @@ export const GlobalContext = createContext<IGlobalContext>({
 })
 
 const Provider = ({ children }: { children: React.ReactNode }) => {
+	const URL_PRODUCTS =
+		'https://cocktail-app-backend-qibnll7xh-octavio-frangipanis-projects.vercel.app/products'
+
 	const [products, setProducts] = useState<IProduct[]>([
 		{
 			_id: '',
@@ -42,7 +45,7 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
 
 	useEffect(() => {
 		const fetchProducts = async () => {
-			const response = await fetch('http://localhost:3001/products', {
+			const response = await fetch(`${URL_PRODUCTS}`, {
 				mode: 'cors',
 				credentials: 'include',
 			})
