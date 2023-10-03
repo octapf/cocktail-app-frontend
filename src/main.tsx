@@ -11,22 +11,19 @@ import Cardlist from './components/Cardlist.tsx'
 import Home from './components/Home.tsx'
 import Profile from './components/Profile.tsx'
 
-const router = createBrowserRouter(
-	[
-		{
-			path: endpoints.HOME,
-			element: <App />,
-			errorElement: <ErrorPage />,
-			children: [
-				{ path: endpoints.HOME, element: <Home /> },
-				{ path: endpoints.COCKTAIL_LIST, element: <Cardlist /> },
-				{ path: endpoints.PROFILE, element: <Profile /> },
-				{ path: endpoints.COCKTAIL, element: <CardDetail /> },
-			],
-		},
-	],
-	{ basename: import.meta.env.DEV ? '/' : '/itacademy-sprint9-2/' }
-)
+const router = createBrowserRouter([
+	{
+		path: endpoints.HOME,
+		element: <App />,
+		errorElement: <ErrorPage />,
+		children: [
+			{ path: endpoints.HOME, element: <Home /> },
+			{ path: endpoints.COCKTAIL_LIST, element: <Cardlist /> },
+			{ path: endpoints.PROFILE, element: <Profile /> },
+			{ path: endpoints.COCKTAIL, element: <CardDetail /> },
+		],
+	},
+])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<GoogleOAuthProvider clientId='370152876277-6ert57it0lm7dt6bmphejdmqvsgcphk9.apps.googleusercontent.com'>
