@@ -18,7 +18,7 @@ A Wiki App to learn about the most famous cocktails in the world
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/octapf/cocktail-app-frontend.git
    ```
 2. Install NPM packages
 
@@ -34,7 +34,7 @@ A Wiki App to learn about the most famous cocktails in the world
 
 ## Help
 
-Contact me frangipani.octavio@gmail.com
+Contact frangipani.octavio@gmail.com
 
 ## Authors
 
