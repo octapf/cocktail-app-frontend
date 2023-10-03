@@ -8,9 +8,8 @@ A Wiki App to learn about the most famous cocktails in the world
 
 - React
 - Typescript
-- Node
-- Express
-- Mongo
+- Vite
+- Vercel
 
 ## Getting Started
 
