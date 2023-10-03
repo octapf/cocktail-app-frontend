@@ -5,22 +5,22 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import React from 'react'
 import endpoints from './constants/endpoints.ts'
-import ErrorPage from './components/Errorpage.tsx'
-import CardDetail from './components/CardDetail.tsx'
-import Cardlist from './components/Cardlist.tsx'
-import Home from './components/Home.tsx'
-import Profile from './components/Profile.tsx'
+import Errorpage from './pages/Errorpage.tsx'
+import Homepage from './pages/Homepage.tsx'
+import ProductListpage from './pages/ProductListpage.tsx'
+import ProductDetailpage from './pages/ProductDetailpage.tsx'
+import Profilepage from './pages/Profilepage.tsx'
 
 const router = createBrowserRouter([
 	{
 		path: endpoints.HOME,
 		element: <App />,
-		errorElement: <ErrorPage />,
+		errorElement: <Errorpage />,
 		children: [
-			{ path: endpoints.HOME, element: <Home /> },
-			{ path: endpoints.COCKTAIL_LIST, element: <Cardlist /> },
-			{ path: endpoints.PROFILE, element: <Profile /> },
-			{ path: endpoints.COCKTAIL, element: <CardDetail /> },
+			{ path: endpoints.HOME, element: <Homepage /> },
+			{ path: endpoints.COCKTAIL_LIST, element: <ProductListpage /> },
+			{ path: endpoints.PROFILE, element: <Profilepage /> },
+			{ path: endpoints.COCKTAIL, element: <ProductDetailpage /> },
 		],
 	},
 ])
