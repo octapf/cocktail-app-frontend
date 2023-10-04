@@ -8,8 +8,9 @@ const NavBar = () => {
 			<Link to={endpoints.COCKTAIL_LIST}>
 				<i className='fa-solid fa-house'></i>
 			</Link>
-			<i className='fa-solid fa-heart'></i>
-			<i className='fa-solid fa-magnifying-glass'></i>
+			<Link to={endpoints.FAVORITES}>
+				<i className='fa-solid fa-heart'></i>
+			</Link>
 			<Link to={endpoints.PROFILE}>
 				<i className='fa-regular fa-user'></i>
 			</Link>

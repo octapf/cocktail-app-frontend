@@ -23,7 +23,7 @@ export const GlobalContext = createContext<IGlobalContext>({
 })
 
 const Provider = ({ children }: { children: React.ReactNode }) => {
-	const URL_PRODUCTS = 'https://cocktailapp-server.vercel.app/products'
+	const URL_PRODUCTS = 'https://cocktailapp-backend.vercel.app/products'
 
 	const [products, setProducts] = useState<IProduct[]>([
 		{

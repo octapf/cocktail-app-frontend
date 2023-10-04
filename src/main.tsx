@@ -10,6 +10,7 @@ import Homepage from './pages/Homepage.tsx'
 import ProductListpage from './pages/ProductListpage.tsx'
 import ProductDetailpage from './pages/ProductDetailpage.tsx'
 import Profilepage from './pages/Profilepage.tsx'
+import Favoritespage from './pages/Favoritespage.tsx'
 
 const router = createBrowserRouter([
 	{
@@ -19,8 +20,9 @@ const router = createBrowserRouter([
 		children: [
 			{ path: endpoints.HOME, element: <Homepage /> },
 			{ path: endpoints.COCKTAIL_LIST, element: <ProductListpage /> },
-			{ path: endpoints.PROFILE, element: <Profilepage /> },
 			{ path: endpoints.COCKTAIL, element: <ProductDetailpage /> },
+			{ path: endpoints.PROFILE, element: <Profilepage /> },
+			{ path: endpoints.FAVORITES, element: <Favoritespage /> },
 		],
 	},
 ])
