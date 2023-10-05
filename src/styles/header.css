@@ -7,24 +7,19 @@
 }
 
 .header {
-	width: var(--width-app);
-	flex-direction: column;
-	align-items: center;
-	row-gap: 1rem;
-	padding: 0.5rem 0;
-	z-index: 100;
-	display: flex;
-	border-radius: 0px 0px 15px 15px;
-	place-content: center;
-	margin-left: auto;
-	margin-right: auto;
-	color: var(--color-four);
-	height: 7.5rem;
-	left: 0;
-	right: 0;
 	position: fixed;
+	height: 7.5rem;
+	display: flex;
+	flex-direction: column;
+	z-index: 100;
 	top: 0;
 	background-color: var(--color-five);
+	width: inherit;
+	place-content: center;
+	row-gap: 1rem;
+	align-items: center;
+	padding: 0.5rem 0;
+	border-radius: 0px 0px 15px 15px;
 }
 
 .header h1 {

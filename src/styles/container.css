@@ -4,6 +4,7 @@
 	--color-three: #ff2e63;
 	--color-four: #eaeaea;
 	--color-five: #1c1d21;
+	--width-app: 26.2rem;
 }
 
 .background-home {
@@ -26,7 +27,7 @@
 }
 
 .container-app {
-	width: 100%;
+	width: var(--width-app);
 }
 
 .contanier-logo {
@@ -84,13 +85,14 @@
 	align-items: center;
 	width: 100%;
 	row-gap: 1.5rem;
-	position: absolute;
-	margin-right: auto;
-	margin-left: auto;
-	left: 0;
-	right: 0;
+	/* position: absolute; */
+	/* margin-right: auto; */
+	/* margin-left: auto; */
+	/* left: 0; */
+	/* right: 0; */
 	background-color: var(--color-one);
-	padding-top: 9.5rem;
+	margin-top: 8.5rem;
+	padding-top: 1.5rem;
 	padding-bottom: 8rem;
 }
 
@@ -113,15 +115,15 @@
 
 .container-card-detail {
 	display: flex;
-	flex-wrap: wrap;
-	place-content: center;
-	width: 100%;
-	position: absolute;
-	margin-right: auto;
-	margin-left: auto;
-	left: 0;
-	height: 100%;
-	right: 0;
+	flex-direction: column;
+	margin-top: 8.5rem;
+	/* display: flex; */
+	/* flex-wrap: wrap; */
+	/* place-content: center; */
+	/* width: 100%; */
+	/* position: absolute; */
+	/* right: 0; */
+	min-height: calc(100vh - 136px);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -130,8 +132,10 @@
 .container-card-detail .card-detail-maintitle {
 	letter-spacing: 1.2rem;
 	line-height: normal;
-	font-size: 3rem;
+	font-size: 2rem;
 	box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+	-webkit-clip-path: inset(-5px 0px -5px 0px);
+	clip-path: inset(-5px 0px -5px 0px);
 	background-color: rgba(0, 0, 0, 0.3);
 	width: 100%;
 	padding: 1rem 0;
@@ -147,6 +151,7 @@
 
 .history-container {
 	display: flex;
+	place-content: center;
 	padding: 2rem 1.5rem;
 	background-color: rgba(0, 0, 0, 0.3);
 }
