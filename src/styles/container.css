@@ -31,6 +31,12 @@
 	width: var(--width-app);
 }
 
+.container-profile {
+	min-height: calc(100vh - 151px);
+	background-color: var(--color-one);
+	padding-top: 9.5rem;
+}
+
 .contanier-logo {
 	position: absolute;
 	top: 50%;

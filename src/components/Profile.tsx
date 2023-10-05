@@ -39,14 +39,13 @@ const Profile = () => {
 		}
 	}, [user])
 
-	// log out function to log the user out of google and set the profile array to null
 	const logOut = () => {
 		googleLogout()
 		setProfile(null)
 	}
 	return (
 		<div>
-			<Container typeContainer={'container-app'}>
+			<Container typeContainer={'container-profile'}>
 				<div>
 					<h2>React Google Login</h2>
 					<br />
