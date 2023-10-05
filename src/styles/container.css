@@ -19,11 +19,12 @@
 	margin-left: auto;
 	z-index: -1;
 	filter: blur(6px);
-	background-color: rgba(43, 37, 31, 0.5);
+	background-color: rgba(43, 37, 31, 0.2);
 	background-blend-mode: multiply;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	clip-path: inset(0px 0px 0px 0px);
 }
 
 .container-app {
@@ -91,8 +92,7 @@
 	/* left: 0; */
 	/* right: 0; */
 	background-color: var(--color-one);
-	margin-top: 8.5rem;
-	padding-top: 1.5rem;
+	padding-top: 9.5rem;
 	padding-bottom: 8rem;
 }
 
@@ -116,7 +116,7 @@
 .container-card-detail {
 	display: flex;
 	flex-direction: column;
-	margin-top: 8.5rem;
+	padding-top: 9.5rem;
 	/* display: flex; */
 	/* flex-wrap: wrap; */
 	/* place-content: center; */

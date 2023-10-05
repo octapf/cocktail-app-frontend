@@ -38,7 +38,6 @@ body {
 	z-index: -3;
 	right: 0;
 	width: var(--width-app);
-	background-color: var(--color-one);
 	max-height: 100vh;
 	min-height: 100vh;
 	color: #fff;
