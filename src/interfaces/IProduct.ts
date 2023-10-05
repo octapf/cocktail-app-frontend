@@ -4,7 +4,7 @@ export default interface IProduct {
 	name: string
 	type: string
 	price: number
-	ingredients: { name: string; quantity: string }[]
+	ingredients: { name: string; quantity: string; _id: string }[]
 	method?: string
 	glass?: string
 	ice?: string

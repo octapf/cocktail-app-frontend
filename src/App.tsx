@@ -1,8 +1,7 @@
 import Container from './components/Container'
 import Header from './components/Header'
-import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Outlet } from 'react-router-dom'
 import endpoints from './constants/endpoints'
 import Provider from './components/Provider'
 

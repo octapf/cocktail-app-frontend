@@ -12,13 +12,11 @@ const CardDetail = () => {
 	if (id) {
 		filteredProduct = products.filter((prod) => prod._id == id)[0]
 
-		const productIngredients = filteredProduct.ingredients.map(
-			(ingredient, i) => (
-				<small className={'ingredient-text'} key={i}>
-					{ingredient.quantity} {ingredient.name}
-				</small>
-			)
-		)
+		const productIngredients = filteredProduct.ingredients.map((ingredient) => (
+			<small className={'ingredient-text'} key={ingredient._id}>
+				{ingredient.quantity} {ingredient.name}
+			</small>
+		))
 
 		const productClass = filteredProduct.name
 			.replace(/[\s&]/g, '')
