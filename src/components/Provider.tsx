@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useEffect, useMemo, useState } from 'react'
 import IGlobalContext from '../interfaces/IGlobalContext'
 import IProduct from '../interfaces/IProduct'
 
@@ -54,13 +54,10 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
 		fetchProducts()
 	}, [])
 
+	const providerValue = useMemo(() => ({ products, setProducts }), [products])
+
 	return (
-		<GlobalContext.Provider
-			value={{
-				products,
-				setProducts,
-			}}
-		>
+		<GlobalContext.Provider value={providerValue}>
 			{children}
 		</GlobalContext.Provider>
 	)

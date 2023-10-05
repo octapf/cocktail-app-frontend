@@ -4,11 +4,11 @@ import endpoints from '../constants/endpoints'
 
 const Homepage = () => {
 	return (
-		<>
+		<div>
 			<Link to={endpoints.COCKTAIL_LIST}>
 				<img className='logo-home' src={logo} alt='logo' />
 			</Link>
-		</>
+		</div>
 	)
 }
 
