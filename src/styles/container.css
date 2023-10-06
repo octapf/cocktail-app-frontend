@@ -98,11 +98,6 @@
 	align-items: center;
 	width: 100%;
 	row-gap: 1.5rem;
-	/* position: absolute; */
-	/* margin-right: auto; */
-	/* margin-left: auto; */
-	/* left: 0; */
-	/* right: 0; */
 	background-color: var(--color-one);
 	padding-top: 9.5rem;
 	padding-bottom: 8rem;
@@ -129,12 +124,6 @@
 	display: flex;
 	flex-direction: column;
 	padding-top: 9.5rem;
-	/* display: flex; */
-	/* flex-wrap: wrap; */
-	/* place-content: center; */
-	/* width: 100%; */
-	/* position: absolute; */
-	/* right: 0; */
 	min-height: calc(100vh - 136px);
 	background-size: cover;
 	background-position: center;
@@ -145,7 +134,7 @@
 	letter-spacing: 1.2rem;
 	line-height: normal;
 	font-size: 2rem;
-	box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
 	-webkit-clip-path: inset(-5px 0px -5px 0px);
 	clip-path: inset(-5px 0px -5px 0px);
 	background-color: rgba(0, 0, 0, 0.3);
@@ -180,7 +169,6 @@
 	padding: 0.5rem 0;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.3);
-	font-weight: 500;
 	gap: 0.5rem;
 	place-content: center;
 }
