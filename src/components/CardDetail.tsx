@@ -9,7 +9,7 @@ const CardDetail = () => {
 	const { products } = useContext(GlobalContext)
 
 	let filteredProduct
-	if (id) {
+	if (id && products.length > 1) {
 		filteredProduct = products.filter((prod) => prod._id == id)[0]
 
 		const productIngredients = filteredProduct.ingredients.map((ingredient) => (

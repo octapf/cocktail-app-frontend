@@ -12,7 +12,7 @@ const Cardlist = () => {
 		const productsContent = products.map((prod) => {
 			return (
 				<Link key={prod._id} to={`${endpoints.COCKTAIL_LIST}/${prod._id}`}>
-					<Card product={prod} />
+					<Card productName={prod.name} />
 				</Link>
 			)
 		})

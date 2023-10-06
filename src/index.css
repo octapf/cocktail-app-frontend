@@ -43,6 +43,20 @@ body {
 	color: #fff;
 }
 
+small::-webkit-scrollbar {
+	width: 5px;
+}
+
+small::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
+}
+
+small::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
 button {
 	border-radius: 8px;
 	border: 1px solid transparent;
