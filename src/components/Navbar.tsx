@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import endpoints from '../constants/endpoints'
 import '../styles/navbar.css'
+import SearchBar from './SearchBar'
 
 const NavBar = () => {
 	const [isExpanded, setIsExpanded] = useState(false)
@@ -22,15 +23,7 @@ const NavBar = () => {
 
 	return (
 		<nav className={`navbar ${isExpanded && 'navbar-expand'}`}>
-			<input
-				className={`navbar-input-search ${
-					!isExpanded && 'navbar-input-search-hidden'
-				}`}
-				ref={searchInput}
-				type='text'
-				name='searchInput'
-				placeholder='Search'
-			/>
+			<SearchBar isExpanded={isExpanded} searchInput={searchInput} />
 
 			<div className='navbar-links'>
 				<Link to={endpoints.COCKTAIL_LIST}>
