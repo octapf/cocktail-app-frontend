@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import endpoints from '../constants/endpoints'
 import '../styles/navbar.css'
@@ -6,13 +6,19 @@ import '../styles/navbar.css'
 const NavBar = () => {
 	const [isExpanded, setIsExpanded] = useState(false)
 
+	const searchInput = useRef<HTMLInputElement>(null)
+
+	useEffect(() => {
+		if (isExpanded) {
+			searchInput.current?.focus()
+		}
+	}, [isExpanded])
+
 	const toogleExpand = () => {
 		setIsExpanded((prevValue) => {
 			return !prevValue
 		})
 	}
-
-	console.log(isExpanded)
 
 	return (
 		<nav className={`navbar ${isExpanded && 'navbar-expand'}`}>
@@ -20,9 +26,9 @@ const NavBar = () => {
 				className={`navbar-input-search ${
 					!isExpanded && 'navbar-input-search-hidden'
 				}`}
+				ref={searchInput}
 				type='text'
 				name='searchInput'
-				id=''
 				placeholder='Search'
 			/>
 
