@@ -23,6 +23,11 @@ const NavBar = () => {
 		setSearchParams({ search: e.target.value })
 	}
 
+	const handleBlur = () => {
+		searchInput.current!.value = ''
+		setIsExpanded(false)
+	}
+
 	const toogleExpand = () => {
 		setIsExpanded((prevValue) => {
 			return !prevValue
@@ -40,7 +45,7 @@ const NavBar = () => {
 				name='searchInput'
 				placeholder='Search'
 				onChange={handleSearchChange}
-				onBlur={() => setIsExpanded(false)}
+				onBlur={handleBlur}
 			/>
 
 			<div className='navbar-links'>
