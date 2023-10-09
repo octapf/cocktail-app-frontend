@@ -29,6 +29,7 @@
 
 .container-app {
 	width: var(--width-app);
+	min-height: calc(100vh - 136px);
 }
 
 .container-profile {
@@ -99,6 +100,7 @@
 	width: 100%;
 	row-gap: 1.5rem;
 	background-color: var(--color-one);
+	min-height: calc(100vh - 136px);
 	padding-top: 9.5rem;
 	padding-bottom: 8rem;
 }

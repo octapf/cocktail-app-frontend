@@ -40,6 +40,7 @@ const NavBar = () => {
 				name='searchInput'
 				placeholder='Search'
 				onChange={handleSearchChange}
+				onBlur={() => setIsExpanded(false)}
 			/>
 
 			<div className='navbar-links'>
