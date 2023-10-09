@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams, useNavigate } from 'react-router-dom'
 import endpoints from '../constants/endpoints'
 import '../styles/navbar.css'
-import SearchBar from './SearchBar'
 
 const NavBar = () => {
 	const [isExpanded, setIsExpanded] = useState(false)
+
+	const [searchParams, setSearchParams] = useSearchParams()
+
+	const navigate = useNavigate()
 
 	const searchInput = useRef<HTMLInputElement>(null)
 
@@ -13,7 +16,12 @@ const NavBar = () => {
 		if (isExpanded) {
 			searchInput.current?.focus()
 		}
-	}, [isExpanded])
+	}, [isExpanded, searchParams])
+
+	const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		navigate('/cocktailist')
+		setSearchParams({ search: e.target.value })
+	}
 
 	const toogleExpand = () => {
 		setIsExpanded((prevValue) => {
@@ -23,7 +31,16 @@ const NavBar = () => {
 
 	return (
 		<nav className={`navbar ${isExpanded && 'navbar-expand'}`}>
-			<SearchBar isExpanded={isExpanded} searchInput={searchInput} />
+			<input
+				className={`navbar-input-search ${
+					!isExpanded && 'navbar-input-search-hidden'
+				}`}
+				ref={searchInput}
+				type='text'
+				name='searchInput'
+				placeholder='Search'
+				onChange={handleSearchChange}
+			/>
 
 			<div className='navbar-links'>
 				<Link to={endpoints.COCKTAIL_LIST}>

@@ -1,26 +1,31 @@
-import { LegacyRef } from 'react'
-import Container from './Container'
+// import Container from './Container'
 
-const SearchBar = ({
-	isExpanded,
-	searchInput,
-}: {
-	isExpanded: boolean
-	searchInput: LegacyRef<HTMLInputElement>
-}) => {
-	return (
-		<Container typeContainer='container-search-bar'>
-			<input
-				className={`navbar-input-search ${
-					!isExpanded && 'navbar-input-search-hidden'
-				}`}
-				ref={searchInput}
-				type='text'
-				name='searchInput'
-				placeholder='Search'
-			/>
-		</Container>
-	)
-}
+// const SearchBar = ({
+// 	isExpanded,
+// 	searchInput,
+// }: {
+// 	isExpanded: boolean
+// 	searchInput: Ref<HTMLInputElement>
+// }) => {
 
-export default SearchBar
+// 	const handleSearchChange = () => {
+// 		console.log(searchInput!.current.value)
+// 	}
+
+// 	return (
+// 		<Container typeContainer='container-search-bar'>
+// 			<input
+// 				className={`navbar-input-search ${
+// 					!isExpanded && 'navbar-input-search-hidden'
+// 				}`}
+// 				ref={searchInput}
+// 				type='text'
+// 				name='searchInput'
+// 				placeholder='Search'
+// 				onChange={handleSearchChange}
+// 			/>
+// 		</Container>
+// 	)
+// }
+
+// export default SearchBar
