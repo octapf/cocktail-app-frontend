@@ -14,7 +14,9 @@ const NavBar = () => {
 
 	useEffect(() => {
 		if (isExpanded) {
-			searchInput.current?.focus()
+			setTimeout(() => {
+				searchInput.current?.focus()
+			}, 100)
 		}
 	}, [isExpanded, searchParams])
 
@@ -36,17 +38,35 @@ const NavBar = () => {
 
 	return (
 		<nav className={`navbar ${isExpanded && 'navbar-expand'}`}>
-			<input
-				className={`navbar-input-search ${
-					!isExpanded && 'navbar-input-search-hidden'
-				}`}
-				ref={searchInput}
-				type='text'
-				name='searchInput'
-				placeholder='Search'
-				onChange={handleSearchChange}
-				onBlur={handleBlur}
-			/>
+			<div className={`container-filters ${!isExpanded && 'hidden'}`}>
+				<div className='carousel alcohol-filter'>
+					<small>Vodka</small>
+					<small>Tequila</small>
+					<small>Light Rum</small>
+					<small>Whisky</small>
+					<small>Gin</small>
+					<small>Triple Sec</small>
+					<small>Cachaça</small>
+				</div>
+				<div className='carousel ingredient-filter'>
+					<p>Hola</p>
+					<p>Hola</p>
+					<p>Hola</p>
+					<p>Hola</p>
+					<p>Hola</p>
+					<p>Hola</p>
+					<p>Hola</p>
+				</div>
+				<input
+					className={`navbar-input-search`}
+					ref={searchInput}
+					type='text'
+					name='searchInput'
+					placeholder='Search'
+					onChange={handleSearchChange}
+					onBlur={handleBlur}
+				/>
+			</div>
 
 			<div className='navbar-links'>
 				<Link to={endpoints.COCKTAIL_LIST}>

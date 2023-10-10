@@ -32,8 +32,33 @@
 }
 
 .navbar-expand {
-	height: 6rem;
+	height: 20rem;
 	border-radius: 1rem;
+}
+
+.carousel {
+	display: flex;
+	column-gap: 1rem;
+	overflow-x: scroll;
+}
+
+.carousel::-webkit-scrollbar {
+	display: none;
+}
+
+.alcohol-filter {
+}
+
+.alcohol-filter small {
+	display: flex;
+	min-width: 7rem;
+	min-height: 7rem;
+	border-radius: 100%;
+	text-align: center;
+	place-content: center;
+	align-items: center;
+	letter-spacing: 0.1rem;
+	background-color: var(--color-one);
 }
 
 .navbar-input-search {
@@ -47,14 +72,14 @@
 	text-align: center;
 	opacity: 1;
 	visibility: visible;
-	-moz-transition: visibility 0.2, opacity 0.9s ease;
-	-ms-transition: visibility 0.2, opacity 0.9s ease;
-	-o-transition: visibility 0.2, opacity 0.9s ease;
-	-webkit-transition: visibility 0.2, opacity 0.9s ease;
-	transition: visibility 0.2, opacity 0.9s ease;
+	-moz-transition: visibility 0.2s, opacity 0.5s ease;
+	-ms-transition: visibility 0.2s, opacity 0.5s ease;
+	-o-transition: visibility 0.2s, opacity 0.5s ease;
+	-webkit-transition: visibility 0.2s, opacity 0.5s ease;
+	transition: visibility 0.2s, opacity 0.5s ease;
 }
 
-.navbar-input-search-hidden {
+.hidden {
 	opacity: 0;
 	visibility: hidden;
 }

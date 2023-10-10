@@ -13,3 +13,5 @@ TODO fix image sizes
 TODO add moving background on homepage
 TODO add steps to make the cocktail?
 TODO create filters for products
+
+TODO add clip-path to navbar
