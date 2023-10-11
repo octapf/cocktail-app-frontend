@@ -1,12 +1,3 @@
-:root {
-	--color-one: #252a34;
-	--color-two: #08d9d6;
-	--color-three: #ff2e63;
-	--color-four: #eaeaea;
-	--color-five: #1c1d21;
-	--width-app: 26.2rem;
-}
-
 .background-home {
 	background-image: url('../assets/home.jpg');
 	width: 100%;

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, useSearchParams, useNavigate } from 'react-router-dom'
 import endpoints from '../constants/endpoints'
 import '../styles/navbar.css'
@@ -22,7 +22,8 @@ const NavBar = () => {
 
 	const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		navigate('/cocktailist')
-		setSearchParams({ search: e.target.value })
+		searchParams.set('search', e.target.value)
+		setSearchParams(searchParams)
 	}
 
 	const handleBlur = () => {
@@ -36,17 +37,40 @@ const NavBar = () => {
 		})
 	}
 
+	const handleAlcoholFilter = (alcohol: string) => {
+		navigate('/cocktailist')
+		searchParams.set('alcohol', alcohol)
+		setSearchParams(searchParams)
+	}
+
 	return (
 		<nav className={`navbar ${isExpanded && 'navbar-expand'}`}>
 			<div className={`container-filters ${!isExpanded && 'hidden'}`}>
 				<div className='carousel alcohol-filter'>
-					<small>Vodka</small>
-					<small>Tequila</small>
-					<small>Light Rum</small>
-					<small>Whisky</small>
-					<small>Gin</small>
-					<small>Triple Sec</small>
-					<small>Cachaça</small>
+					<small
+						className={`vodka-filter`}
+						onClick={() => handleAlcoholFilter('vodka')}
+					>
+						Vodka
+					</small>
+					<small
+						className={`tequila-filter`}
+						onClick={() => handleAlcoholFilter('tequila')}
+					>
+						Tequila
+					</small>
+					<small
+						className={`lightrum-filter`}
+						onClick={() => handleAlcoholFilter('light rum')}
+					>
+						Light Rum
+					</small>
+					<small onClick={() => handleAlcoholFilter('whisky')}>Whisky</small>
+					<small onClick={() => handleAlcoholFilter('gin')}>Gin</small>
+					<small onClick={() => handleAlcoholFilter('triple sec')}>
+						Triple Sec
+					</small>
+					<small onClick={() => handleAlcoholFilter('cachaça')}>Cachaça</small>
 				</div>
 				<div className='carousel ingredient-filter'>
 					<p>Hola</p>
@@ -64,11 +88,10 @@ const NavBar = () => {
 					name='searchInput'
 					placeholder='Search'
 					onChange={handleSearchChange}
-					onBlur={handleBlur}
 				/>
 			</div>
 
-			<div className='navbar-links'>
+			<div className='navbar-links' onFocus={handleBlur}>
 				<Link to={endpoints.COCKTAIL_LIST}>
 					<i className='fa-solid fa-house'></i>
 				</Link>
