@@ -1,13 +1,14 @@
 import { RefObject } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import productsEnum from '../../constants/productsEnum'
+import FilterAlcohol from './FilterAlcohol'
 
-const SearchBar = ({
-	isExpanded,
-	searchInput,
-}: {
+type SearchBarPros = {
 	isExpanded: boolean
 	searchInput: RefObject<HTMLInputElement>
-}) => {
+}
+
+const SearchBar = ({ isExpanded, searchInput }: SearchBarPros) => {
 	const [searchParams, setSearchParams] = useSearchParams()
 
 	const navigate = useNavigate()
@@ -23,39 +24,16 @@ const SearchBar = ({
 		}
 	}
 
-	const handleAlcoholFilter = (alcohol: string) => {
-		navigate('/cocktailist')
-		searchParams.set('alcohol', alcohol)
-		setSearchParams(searchParams)
-	}
-
 	return (
 		<div className={`container-filters ${!isExpanded && 'hidden'}`}>
 			<div className='carousel alcohol-filter'>
-				<small
-					className={`vodka-filter`}
-					onClick={() => handleAlcoholFilter('vodka')}
-				>
-					Vodka
-				</small>
-				<small
-					className={`tequila-filter`}
-					onClick={() => handleAlcoholFilter('tequila')}
-				>
-					Tequila
-				</small>
-				<small
-					className={`lightrum-filter`}
-					onClick={() => handleAlcoholFilter('light rum')}
-				>
-					Light Rum
-				</small>
-				<small onClick={() => handleAlcoholFilter('whisky')}>Whisky</small>
-				<small onClick={() => handleAlcoholFilter('gin')}>Gin</small>
-				<small onClick={() => handleAlcoholFilter('triple sec')}>
-					Triple Sec
-				</small>
-				<small onClick={() => handleAlcoholFilter('cachaça')}>Cachaça</small>
+				<FilterAlcohol productName={productsEnum.VODKA} />
+				<FilterAlcohol productName={productsEnum.TEQUILA} />
+				<FilterAlcohol productName={productsEnum.LIGHT_RUM} />
+				<FilterAlcohol productName={productsEnum.WHISKY} />
+				<FilterAlcohol productName={productsEnum.GIN} />
+				<FilterAlcohol productName={productsEnum.TRIPLE_SEC} />
+				<FilterAlcohol productName={productsEnum.CACHAÇA} />
 			</div>
 			<div className='carousel ingredient-filter'>
 				<p>Hola</p>
