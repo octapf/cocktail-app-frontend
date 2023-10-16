@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
-import Container from './Container'
-import { useProductContext } from '../hooks/useProductContext'
-import TIngredients from '../types/TIngredients'
+import Container from '../Container'
+import { useProductContext } from '../../hooks/useProductContext'
+import TIngredients from '../../types/TIngredients'
 
 const CardDetail = () => {
 	const { id } = useParams()

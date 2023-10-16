@@ -1,4 +1,4 @@
-import Cardlist from '../components/Cardlist'
+import Cardlist from '../components/Card/Cardlist'
 
 const ProductListpage = () => {
 	return <Cardlist />

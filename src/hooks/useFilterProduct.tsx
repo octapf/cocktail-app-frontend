@@ -1,6 +1,6 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import TProduct from '../types/TProduct'
-import Card from '../components/Card'
+import Card from '../components/Card/Card'
 import endpoints from '../constants/endpoints'
 
 const useFilterProducts = (products: TProduct[]) => {
