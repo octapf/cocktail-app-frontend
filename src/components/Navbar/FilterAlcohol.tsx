@@ -2,11 +2,11 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { capitalize } from '../../utils/capitalize'
 import { removeSpaces } from '../../utils/removeSpaces'
 
-type FilterAlcoholProps = {
+type TFilterAlcoholProps = {
 	productName: string
 }
 
-const FilterAlcohol = ({ productName }: FilterAlcoholProps) => {
+const FilterAlcohol = ({ productName }: TFilterAlcoholProps) => {
 	const [searchParams, setSearchParams] = useSearchParams()
 
 	const navigate = useNavigate()

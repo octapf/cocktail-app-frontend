@@ -3,12 +3,12 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import productsEnum from '../../constants/productsEnum'
 import FilterAlcohol from './FilterAlcohol'
 
-type SearchBarPros = {
+type TSearchBarPros = {
 	isExpanded: boolean
 	searchInput: RefObject<HTMLInputElement>
 }
 
-const SearchBar = ({ isExpanded, searchInput }: SearchBarPros) => {
+const SearchBar = ({ isExpanded, searchInput }: TSearchBarPros) => {
 	const [searchParams, setSearchParams] = useSearchParams()
 
 	const navigate = useNavigate()

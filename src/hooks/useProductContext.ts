@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import { GlobalContext } from '../contexts/Provider'
+import { ProductContext } from '../contexts/Provider'
 
 export const useProductContext = () => {
-	const context = useContext(GlobalContext)
+	const context = useContext(ProductContext)
 
 	if (!context) {
 		throw new Error(
