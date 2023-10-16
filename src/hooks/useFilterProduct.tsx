@@ -9,55 +9,37 @@ const useFilterProducts = (products: TProduct[]) => {
 	const searchParam = searchParams.get('search')
 	const alcoholParam = searchParams.get('alcohol')
 
-	let productsContent: React.ReactNode[] = []
+	let productsContent = products
+
 	if (searchParam !== null && searchParam.length > 0) {
 		console.log('SEARCH PARAM')
 
-		productsContent = products
-			.filter((prod: TProduct) =>
-				prod.name.toLowerCase().match(searchParam.toLowerCase())
-			)
-			.map((prod: TProduct) => {
-				return (
-					<Link key={prod._id} to={`${endpoints.COCKTAIL_LIST}/${prod._id}`}>
-						<Card productName={prod.name} />
-					</Link>
-				)
-			})
+		productsContent = productsContent.filter((prod: TProduct) =>
+			prod.name.toLowerCase().match(searchParam.toLowerCase())
+		)
 	}
 
 	if (alcoholParam !== null) {
-		const filteredByAlcohol = products.filter((prod: TProduct) =>
+		console.log('ALCOHOL PARAM')
+
+		productsContent = productsContent.filter((prod: TProduct) =>
 			prod.ingredients.some((el) =>
 				el.name.toLowerCase().match(new RegExp(`^${alcoholParam}$`))
 			)
 		)
-
-		console.log(filteredByAlcohol)
-		console.log('ALCOHOL PARAM')
-
-		productsContent = filteredByAlcohol.map((prod: TProduct) => {
-			return (
-				<Link key={prod._id} to={`${endpoints.COCKTAIL_LIST}/${prod._id}`}>
-					<Card productName={prod.name} />
-				</Link>
-			)
-		})
 	}
 
-	if (searchParam == null && alcoholParam == null) {
-		console.log('NO PARAM')
+	console.log(productsContent)
 
-		productsContent = products.map((prod) => {
-			return (
-				<Link key={prod._id} to={`${endpoints.COCKTAIL_LIST}/${prod._id}`}>
-					<Card productName={prod.name} />
-				</Link>
-			)
-		})
-	}
+	const result = productsContent?.map((prod: TProduct) => {
+		return (
+			<Link key={prod._id} to={`${endpoints.COCKTAIL_LIST}/${prod._id}`}>
+				<Card productName={prod.name} />
+			</Link>
+		)
+	})
 
-	return productsContent
+	return result
 }
 
 export default useFilterProducts

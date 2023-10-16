@@ -22,8 +22,13 @@ const NavBar = () => {
 
 	const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		navigate('/cocktailist')
-		searchParams.set('search', e.target.value)
-		setSearchParams(searchParams)
+		if (e.target.value === '') {
+			searchParams.delete('search')
+			setSearchParams(searchParams)
+		} else {
+			searchParams.set('search', e.target.value)
+			setSearchParams(searchParams)
+		}
 	}
 
 	const handleBlur = () => {
