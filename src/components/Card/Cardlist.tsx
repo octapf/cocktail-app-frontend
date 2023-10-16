@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useProductContext } from '../../hooks/useProductContext'
 import Container from '../Container'
-import useFilterProducts from '../../hooks/useFilterProduct'
+import { useFilterProducts } from '../../hooks/useFilterProduct'
 
 const Cardlist = () => {
 	const { products } = useProductContext()

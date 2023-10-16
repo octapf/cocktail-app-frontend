@@ -1,21 +1,14 @@
-import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import endpoints from '../../constants/endpoints'
 import '../../styles/navbar.css'
 import SearchBar from './SearchBar'
+import { useRefInputFocus } from '../../hooks/useRefInputFocus'
 
 const NavBar = () => {
-	const [isExpanded, setIsExpanded] = useState(false)
-
-	const searchInput = useRef<HTMLInputElement>(null)
-
-	useEffect(() => {
-		if (isExpanded) {
-			setTimeout(() => {
-				searchInput.current?.focus()
-			}, 100)
-		}
-	}, [isExpanded])
+	const {
+		expandNav: [isExpanded, setIsExpanded],
+		searchInput,
+	} = useRefInputFocus()
 
 	const handleBlur = () => {
 		searchInput.current!.value = ''
