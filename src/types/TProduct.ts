@@ -1,4 +1,4 @@
-export default interface IProduct {
+type TProduct = {
 	_id: string
 	user: string
 	name: string
@@ -12,3 +12,5 @@ export default interface IProduct {
 	optional?: string[]
 	history?: string
 }
+
+export default TProduct

@@ -1,22 +1,24 @@
 import { useParams } from 'react-router-dom'
 import Container from './Container'
-import { useContext } from 'react'
-import { GlobalContext } from './Provider'
+import { useProductContext } from '../hooks/useProductContext'
+import TIngredients from '../types/TIngredients'
 
 const CardDetail = () => {
 	const { id } = useParams()
 
-	const { products } = useContext(GlobalContext)
+	const { products } = useProductContext()
 
 	let filteredProduct
 	if (id && products.length > 1) {
 		filteredProduct = products.filter((prod) => prod._id == id)[0]
 
-		const productIngredients = filteredProduct.ingredients.map((ingredient) => (
-			<small className={'ingredient-text'} key={ingredient._id}>
-				{ingredient.quantity} {ingredient.name}
-			</small>
-		))
+		const productIngredients = filteredProduct.ingredients.map(
+			(ingredient: TIngredients) => (
+				<small className={'ingredient-text'} key={ingredient._id}>
+					{ingredient.quantity} {ingredient.name}
+				</small>
+			)
+		)
 
 		const productClass = filteredProduct.name
 			.replace(/[\s&]/g, '')

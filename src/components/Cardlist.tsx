@@ -1,13 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useContext } from 'react'
-import { GlobalContext } from './Provider'
+import { useProductContext } from '../hooks/useProductContext'
 import { Link, useSearchParams } from 'react-router-dom'
 import Card from './Card'
 import endpoints from '../constants/endpoints'
 import Container from './Container'
 
 const Cardlist = () => {
-	const { products } = useContext(GlobalContext)
+	const { products } = useProductContext()
 
 	const [searchParams] = useSearchParams()
 
@@ -15,6 +14,7 @@ const Cardlist = () => {
 	const alcoholParam = searchParams.get('alcohol')
 
 	if (products.length < 1) return <>Loading</>
+
 	let productsContent: any[] = []
 	if (searchParam !== null && searchParam.length > 0) {
 		console.log('SEARCH PARAM')

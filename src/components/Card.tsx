@@ -1,7 +1,7 @@
-import ICard from '../interfaces/ICard'
+import TCard from '../types/TCard'
 import Container from './Container'
 
-const Card = ({ productName }: ICard) => {
+const Card = ({ productName }: TCard) => {
 	const productClass = productName.replace(/[\s&]/g, '').toLowerCase()
 
 	return (

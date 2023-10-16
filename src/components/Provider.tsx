@@ -1,8 +1,8 @@
 import { createContext, useEffect, useMemo, useState } from 'react'
-import IGlobalContext from '../interfaces/IGlobalContext'
-import IProduct from '../interfaces/IProduct'
+import TProductContext from '../types/TProductContext'
+import TProduct from '../types/TProduct'
 
-export const GlobalContext = createContext<IGlobalContext>({
+export const GlobalContext = createContext<TProductContext>({
 	products: [
 		{
 			_id: '',
@@ -25,7 +25,7 @@ export const GlobalContext = createContext<IGlobalContext>({
 const Provider = ({ children }: { children: React.ReactNode }) => {
 	const URL_PRODUCTS = 'https://cocktailapp-backend.vercel.app/products'
 
-	const [products, setProducts] = useState<IProduct[]>([
+	const [products, setProducts] = useState<TProduct[]>([
 		{
 			_id: '',
 			user: '',
