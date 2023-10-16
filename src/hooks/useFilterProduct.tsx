@@ -11,7 +11,7 @@ export const useFilterProducts = (products: TProduct[]) => {
 
 	let productsContent = products
 
-	if (searchParam !== null && searchParam.length > 0) {
+	if (searchParam !== null) {
 		productsContent = productsContent.filter((prod: TProduct) =>
 			prod.name.toLowerCase().match(searchParam.toLowerCase())
 		)
