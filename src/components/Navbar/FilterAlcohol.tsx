@@ -1,9 +1,10 @@
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { capitalize } from '../../utils/capitalize'
 import { removeSpaces } from '../../utils/removeSpaces'
+import productsEnum from '../../constants/productsEnum'
 
 type TFilterAlcoholProps = {
-	productName: string
+	productName: productsEnum
 }
 
 const FilterAlcohol = ({ productName }: TFilterAlcoholProps) => {
@@ -20,7 +21,9 @@ const FilterAlcohol = ({ productName }: TFilterAlcoholProps) => {
 	return (
 		<small
 			className={`${removeSpaces(productName)}-filter`}
-			onClick={() => handleAlcoholFilter(productName)}
+			onClick={() => {
+				handleAlcoholFilter(productName)
+			}}
 		>
 			{capitalize(productName)}
 		</small>
