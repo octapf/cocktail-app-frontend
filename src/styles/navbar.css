@@ -46,8 +46,14 @@
 	text-align: center;
 	place-content: center;
 	align-items: center;
-	letter-spacing: 0.1rem;
+	letter-spacing: 0.2rem;
 	background-color: var(--color-one);
+	transition: box-shadow 0.2s;
+}
+
+.alcohol-selected {
+	box-shadow: 0px -3px 0px var(--color-four) inset;
+	transition: box-shadow 0.2s;
 }
 
 .navbar-input-search {

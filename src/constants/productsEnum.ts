@@ -6,6 +6,7 @@ enum productsEnum {
 	GIN = 'gin',
 	TRIPLE_SEC = 'triple sec',
 	CACHAÇA = 'cachaça',
+	NONE = 'none',
 }
 
 export default productsEnum

@@ -2,12 +2,13 @@ import { Link, useSearchParams } from 'react-router-dom'
 import TProduct from '../types/TProduct'
 import Card from '../components/Card/Card'
 import endpoints from '../constants/endpoints'
+import queryParams from '../constants/queryParams'
 
 export const useFilterProducts = (products: TProduct[]) => {
 	const [searchParams] = useSearchParams()
 
-	const searchParam = searchParams.get('search')
-	const alcoholParam = searchParams.get('alcohol')
+	const searchParam = searchParams.get(queryParams.SEARCH)
+	const alcoholParam = searchParams.get(queryParams.ALCOHOL)
 
 	let productsContent = products
 

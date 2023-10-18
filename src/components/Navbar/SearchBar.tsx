@@ -2,6 +2,8 @@ import { RefObject } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import productsEnum from '../../constants/productsEnum'
 import FilterAlcohol from './FilterAlcohol'
+import endpoints from '../../constants/endpoints'
+import queryParams from '../../constants/queryParams'
 
 type TSearchBarPros = {
 	isExpanded: boolean
@@ -14,12 +16,12 @@ const SearchBar = ({ isExpanded, searchInput }: TSearchBarPros) => {
 	const navigate = useNavigate()
 
 	const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		navigate('/cocktailist')
+		navigate(endpoints.COCKTAIL_LIST)
 		if (e.target.value === '') {
-			searchParams.delete('search')
+			searchParams.delete(queryParams.SEARCH)
 			setSearchParams(searchParams)
 		} else {
-			searchParams.set('search', e.target.value)
+			searchParams.set(queryParams.SEARCH, e.target.value)
 			setSearchParams(searchParams)
 		}
 	}
