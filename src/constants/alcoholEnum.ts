@@ -1,4 +1,4 @@
-enum productsEnum {
+export enum alcoholEnum {
 	VODKA = 'vodka',
 	TEQUILA = 'tequila',
 	LIGHT_RUM = 'light rum',
@@ -8,5 +8,3 @@ enum productsEnum {
 	CACHAÇA = 'cachaça',
 	NONE = 'none',
 }
-
-export default productsEnum

@@ -1,17 +1,17 @@
 import { createContext, useMemo, useState } from 'react'
 import TFilterContext from '../types/TFilterContext'
-import productsEnum from '../constants/productsEnum'
+import { alcoholEnum } from '../constants/alcoholEnum'
 
 export const FilterContext = createContext<TFilterContext>({
-	filterSelected: productsEnum.NONE,
+	filterSelected: alcoholEnum.NONE,
 	setFilterSelected: () => {},
 })
 
 type TProviderProps = { children: React.ReactNode }
 
 const FiltersProvider = ({ children }: TProviderProps) => {
-	const [filterSelected, setFilterSelected] = useState<productsEnum>(
-		productsEnum.NONE
+	const [filterSelected, setFilterSelected] = useState<alcoholEnum>(
+		alcoholEnum.NONE
 	)
 
 	const providerValue = useMemo(

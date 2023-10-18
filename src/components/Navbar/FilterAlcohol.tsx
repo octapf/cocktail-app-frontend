@@ -1,24 +1,24 @@
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { capitalize } from '../../utils/capitalize'
 import { removeSpaces } from '../../utils/removeSpaces'
-import productsEnum from '../../constants/productsEnum'
+import { alcoholEnum } from '../../constants/alcoholEnum'
 import { FilterContext } from '../../contexts/FiltersProvider'
 import { useContext } from 'react'
 import endpoints from '../../constants/endpoints'
 import queryParams from '../../constants/queryParams'
 
 type TFilterAlcoholProps = {
-	productName: productsEnum
+	alcoholName: alcoholEnum
 }
 
-const FilterAlcohol = ({ productName }: TFilterAlcoholProps) => {
+const FilterAlcohol = ({ alcoholName }: TFilterAlcoholProps) => {
 	const [searchParams, setSearchParams] = useSearchParams()
 
 	const { filterSelected, setFilterSelected } = useContext(FilterContext)
 
 	const navigate = useNavigate()
 
-	const handleAlcoholFilter = (alcohol: productsEnum) => {
+	const handleAlcoholFilter = (alcohol: alcoholEnum) => {
 		navigate(endpoints.COCKTAIL_LIST)
 		if (searchParams.get(queryParams.ALCOHOL) == alcohol) {
 			searchParams.delete(queryParams.ALCOHOL)
@@ -30,21 +30,19 @@ const FilterAlcohol = ({ productName }: TFilterAlcoholProps) => {
 
 	return (
 		<small
-			className={`${removeSpaces(productName)}-filter${
-				filterSelected == productName ? `${' '}alcohol-selected` : ''
+			className={`${removeSpaces(alcoholName)}-filter${
+				filterSelected == alcoholName ? `${' '}alcohol-selected` : ''
 			}`}
 			onClick={() => {
-				handleAlcoholFilter(productName)
-				setFilterSelected((prev) => {
-					prev == productName
-						? (prev = productsEnum.NONE)
-						: (prev = productName)
+				handleAlcoholFilter(alcoholName)
+				setFilterSelected((prev: alcoholEnum) => {
+					prev == alcoholName ? (prev = alcoholEnum.NONE) : (prev = alcoholName)
 
 					return prev
 				})
 			}}
 		>
-			{capitalize(productName)}
+			{capitalize(alcoholName)}
 		</small>
 	)
 }

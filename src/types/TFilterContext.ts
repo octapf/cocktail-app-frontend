@@ -1,4 +1,4 @@
-import productsEnum from '../constants/productsEnum'
+import productsEnum from '../constants/alcoholEnum'
 
 type TFilterContext = {
 	filterSelected: productsEnum

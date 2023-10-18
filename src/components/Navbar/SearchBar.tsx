@@ -1,9 +1,11 @@
 import { RefObject } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import productsEnum from '../../constants/productsEnum'
+import { alcoholEnum } from '../../constants/alcoholEnum'
 import FilterAlcohol from './FilterAlcohol'
 import endpoints from '../../constants/endpoints'
 import queryParams from '../../constants/queryParams'
+import { fruitEnum } from '../../constants/fruitEnum'
+import FilterFruit from './FilterFruit'
 
 type TSearchBarPros = {
 	isExpanded: boolean
@@ -29,22 +31,23 @@ const SearchBar = ({ isExpanded, searchInput }: TSearchBarPros) => {
 	return (
 		<div className={`container-filters ${!isExpanded && 'hidden'}`}>
 			<div className='carousel alcohol-filter'>
-				<FilterAlcohol productName={productsEnum.VODKA} />
-				<FilterAlcohol productName={productsEnum.TEQUILA} />
-				<FilterAlcohol productName={productsEnum.LIGHT_RUM} />
-				<FilterAlcohol productName={productsEnum.WHISKY} />
-				<FilterAlcohol productName={productsEnum.GIN} />
-				<FilterAlcohol productName={productsEnum.TRIPLE_SEC} />
-				<FilterAlcohol productName={productsEnum.CACHAÇA} />
+				<FilterAlcohol alcoholName={alcoholEnum.VODKA} />
+				<FilterAlcohol alcoholName={alcoholEnum.TEQUILA} />
+				<FilterAlcohol alcoholName={alcoholEnum.LIGHT_RUM} />
+				<FilterAlcohol alcoholName={alcoholEnum.WHISKY} />
+				<FilterAlcohol alcoholName={alcoholEnum.GIN} />
+				<FilterAlcohol alcoholName={alcoholEnum.TRIPLE_SEC} />
+				<FilterAlcohol alcoholName={alcoholEnum.CACHAÇA} />
 			</div>
-			<div className='carousel ingredient-filter'>
-				<p>Hola</p>
-				<p>Hola</p>
-				<p>Hola</p>
-				<p>Hola</p>
-				<p>Hola</p>
-				<p>Hola</p>
-				<p>Hola</p>
+			<div className='carousel fruit-filter'>
+				<FilterFruit fruitName={fruitEnum.COCONUT} />
+				<FilterFruit fruitName={fruitEnum.PEACH} />
+				<FilterFruit fruitName={fruitEnum.ORANGE} />
+				<FilterFruit fruitName={fruitEnum.TOMATO} />
+				<FilterFruit fruitName={fruitEnum.MINT} />
+				<FilterFruit fruitName={fruitEnum.PINEAPPLE} />
+				<FilterFruit fruitName={fruitEnum.LEMON} />
+				<FilterFruit fruitName={fruitEnum.LIME} />
 			</div>
 			<input
 				className={`navbar-input-search`}

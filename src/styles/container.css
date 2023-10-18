@@ -180,6 +180,14 @@
 	background-color: rgba(43, 43, 43, 0.4);
 }
 
+.container-fruit-filter {
+	display: flex;
+	flex-direction: column;
+	font-size: 0.8rem;
+	letter-spacing: 0.2rem;
+	align-items: center;
+}
+
 .mojito {
 	background-image: url('../assets/mojito.jpg');
 }
