@@ -1,4 +1,4 @@
-export default interface IProduct {
+export type TProduct = {
 	_id: string
 	user: string
 	name: string

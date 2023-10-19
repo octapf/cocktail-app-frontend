@@ -8,10 +8,14 @@ TODO make history textArea to put more info?🆗
 TODO fix app structure folders (pages/screens) 🆗
 TODO fix reload cardDetail component - crash 🆗
 TODO fix scrollbar🆗
+TODO create filters for products 🆗
+TODO make fruitfilter work 🆗
+TODO refactor isExpanded navbar on provider 🆗
 
 TODO fix image sizes
 TODO add moving background on homepage
 TODO add steps to make the cocktail?
-TODO create filters for products
 
 TODO add clip-path to navbar
+TODO isActive fruitFilter animation
+TODO fix bug apply navFilter when cardDetail

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo-uh.svg'
-import endpoints from '../constants/endpoints'
+import { endpoints } from '../constants/endpoints'
 
 import '../styles/header.css'
 

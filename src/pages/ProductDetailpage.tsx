@@ -1,4 +1,4 @@
-import CardDetail from '../components/CardDetail'
+import CardDetail from '../components/Card/CardDetail'
 
 const ProductDetailpage = () => {
 	return <CardDetail />

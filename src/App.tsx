@@ -1,32 +1,33 @@
 import Container from './components/Container'
 import Header from './components/Header'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 import { useLocation, Outlet } from 'react-router-dom'
-import endpoints from './constants/endpoints'
-import Provider from './components/Provider'
+import { endpoints } from './constants/endpoints'
+import ProductProvider from './contexts/ProductProvider'
+import FiltersProvider from './contexts/FiltersProvider'
 
 function App() {
 	const location = useLocation()
 
-	if (location.pathname == endpoints.HOME) {
-		return (
-			<Provider>
-				<div className='background-home'></div>
-				<Container typeContainer='contanier-logo'>
-					<Outlet />
-				</Container>
-			</Provider>
-		)
-	}
-
 	return (
-		<Provider>
-			<Container typeContainer={'container-app'}>
-				<Header />
-				<Outlet />
-				<Navbar />
-			</Container>
-		</Provider>
+		<ProductProvider>
+			<FiltersProvider>
+				{location.pathname == endpoints.HOME ? (
+					<>
+						<div className='background-home'></div>
+						<Container typeContainer='contanier-logo'>
+							<Outlet />
+						</Container>
+					</>
+				) : (
+					<Container typeContainer={'container-app'}>
+						<Header />
+						<Outlet />
+						<Navbar />
+					</Container>
+				)}
+			</FiltersProvider>
+		</ProductProvider>
 	)
 }
 

@@ -1,7 +1,7 @@
-import IContainer from '../interfaces/IContainer'
+import { TContainer } from '../types/TContainer'
 import '../styles/container.css'
 
-const Container = ({ typeContainer, children, myStyle }: IContainer) => {
+const Container = ({ typeContainer, children, myStyle }: TContainer) => {
 	return (
 		<div className={typeContainer} style={myStyle}>
 			{children}

@@ -1,8 +1,8 @@
 import { createContext, useEffect, useMemo, useState } from 'react'
-import IGlobalContext from '../interfaces/IGlobalContext'
-import IProduct from '../interfaces/IProduct'
+import { TProductContext } from '../types/TProductContext'
+import { TProduct } from '../types/TProduct'
 
-export const GlobalContext = createContext<IGlobalContext>({
+export const ProductContext = createContext<TProductContext>({
 	products: [
 		{
 			_id: '',
@@ -22,10 +22,12 @@ export const GlobalContext = createContext<IGlobalContext>({
 	setProducts: () => {},
 })
 
-const Provider = ({ children }: { children: React.ReactNode }) => {
+type TProviderProps = { children: React.ReactNode }
+
+const Provider = ({ children }: TProviderProps) => {
 	const URL_PRODUCTS = 'https://cocktailapp-backend.vercel.app/products'
 
-	const [products, setProducts] = useState<IProduct[]>([
+	const [products, setProducts] = useState<TProduct[]>([
 		{
 			_id: '',
 			user: '',
@@ -57,9 +59,9 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
 	const providerValue = useMemo(() => ({ products, setProducts }), [products])
 
 	return (
-		<GlobalContext.Provider value={providerValue}>
+		<ProductContext.Provider value={providerValue}>
 			{children}
-		</GlobalContext.Provider>
+		</ProductContext.Provider>
 	)
 }
 
