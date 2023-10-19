@@ -44,6 +44,7 @@
 	display: flex;
 	min-width: 7rem;
 	min-height: 7rem;
+	font-size: 0.8rem;
 	border-radius: 100%;
 	text-align: center;
 	place-content: center;
