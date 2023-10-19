@@ -1,6 +1,8 @@
 .navbar {
+	border: 1px solid red;
 	display: flex;
 	place-content: end;
+	align-items: center;
 	flex-direction: column;
 	position: fixed;
 	margin-left: auto;
@@ -35,6 +37,10 @@
 	margin: 1rem 0;
 }
 
+.carousel::before {
+	box-shadow: inset 0px 10px 10px var(--color-two);
+}
+
 .carousel::-webkit-scrollbar {
 	display: none;
 }
@@ -62,6 +68,7 @@
 	color: var(--color-four);
 	padding: 1rem;
 	border-radius: 1rem;
+	width: 90%;
 	outline: none;
 	border: none;
 	font-size: 1.1rem;

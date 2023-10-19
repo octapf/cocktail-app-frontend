@@ -22,7 +22,7 @@ const NavBar = () => {
 	}
 
 	return (
-		<nav className={`navbar ${isExpanded && 'navbar-expand'}`}>
+		<nav className={`navbar ${isExpanded ? 'navbar-expand' : ''}`}>
 			<SearchBar isExpanded={isExpanded} searchInput={searchInput} />
 
 			<div className='navbar-links' onFocus={handleBlur}>

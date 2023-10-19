@@ -180,6 +180,10 @@
 	background-color: rgba(43, 43, 43, 0.4);
 }
 
+.container-filters {
+	width: 95%;
+}
+
 .container-fruit-filter {
 	display: flex;
 	flex-direction: column;

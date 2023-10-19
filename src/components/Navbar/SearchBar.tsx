@@ -29,7 +29,7 @@ const SearchBar = ({ isExpanded, searchInput }: TSearchBarPros) => {
 	}
 
 	return (
-		<div className={`container-filters ${!isExpanded && 'hidden'}`}>
+		<div className={`container-filters ${!isExpanded ? 'hidden' : ''}`}>
 			<div className='carousel alcohol-filter'>
 				<FilterAlcohol alcoholName={alcoholEnum.VODKA} />
 				<FilterAlcohol alcoholName={alcoholEnum.TEQUILA} />
