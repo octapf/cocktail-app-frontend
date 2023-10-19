@@ -36,10 +36,6 @@
 	margin: 1rem 0;
 }
 
-.carousel::before {
-	box-shadow: inset 0px 10px 10px var(--color-two);
-}
-
 .carousel::-webkit-scrollbar {
 	display: none;
 }
@@ -59,6 +55,11 @@
 
 .alcohol-selected {
 	box-shadow: 0px -3px 0px var(--color-four) inset;
+	transition: box-shadow 0.2s;
+}
+
+.fruit-selected {
+	background-color: var(--color-one);
 	transition: box-shadow 0.2s;
 }
 
