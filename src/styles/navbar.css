@@ -38,6 +38,11 @@
 	display: none;
 }
 
+.carousel small:hover {
+	cursor: pointer;
+	background-color: var(--color-six);
+}
+
 .alcohol-filter small {
 	display: flex;
 	min-width: 7rem;

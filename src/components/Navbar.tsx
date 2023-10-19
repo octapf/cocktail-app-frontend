@@ -72,7 +72,7 @@ const NavBar = () => {
 					</small>
 					<small onClick={() => handleAlcoholFilter('cachaça')}>Cachaça</small>
 				</div>
-				<div className='carousel ingredient-filter'>
+				{/* <div className='carousel ingredient-filter'>
 					<p>Hola</p>
 					<p>Hola</p>
 					<p>Hola</p>
@@ -80,7 +80,7 @@ const NavBar = () => {
 					<p>Hola</p>
 					<p>Hola</p>
 					<p>Hola</p>
-				</div>
+				</div> */}
 				<input
 					className={`navbar-input-search`}
 					ref={searchInput}
