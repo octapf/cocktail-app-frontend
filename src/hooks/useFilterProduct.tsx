@@ -9,6 +9,7 @@ export const useFilterProducts = (products: TProduct[]) => {
 
 	const searchParam = searchParams.get(queryParams.SEARCH)
 	const alcoholParam = searchParams.get(queryParams.ALCOHOL)
+	const fruitParam = searchParams.get(queryParams.FRUIT)
 
 	let productsContent = products
 
@@ -21,7 +22,15 @@ export const useFilterProducts = (products: TProduct[]) => {
 	if (alcoholParam !== null) {
 		productsContent = productsContent.filter((prod: TProduct) =>
 			prod.ingredients.some((el) =>
-				el.name.toLowerCase().match(new RegExp(`^${alcoholParam}$`))
+				el.name.toLowerCase().match(new RegExp(`${alcoholParam}`))
+			)
+		)
+	}
+
+	if (fruitParam !== null) {
+		productsContent = productsContent.filter((prod: TProduct) =>
+			prod.ingredients.some((el) =>
+				el.name.toLowerCase().match(new RegExp(`${fruitParam}`))
 			)
 		)
 	}
