@@ -1,4 +1,4 @@
-type TProduct = {
+export type TProduct = {
 	_id: string
 	user: string
 	name: string
@@ -12,5 +12,3 @@ type TProduct = {
 	optional?: string[]
 	history?: string
 }
-
-export default TProduct

@@ -2,8 +2,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { removeSpaces } from '../../utils/removeSpaces'
 import { FilterContext } from '../../contexts/FiltersProvider'
 import { useContext } from 'react'
-import endpoints from '../../constants/endpoints'
-import queryParams from '../../constants/queryParams'
+import { endpoints } from '../../constants/endpoints'
+import { queryParams } from '../../constants/queryParams'
 import { fruitEnum } from '../../constants/fruitEnum'
 import Container from '../Container'
 import { capitalize } from '../../utils/capitalize'
@@ -15,7 +15,8 @@ type TFilterFruitProps = {
 const FilterFruit = ({ fruitName }: TFilterFruitProps) => {
 	const [searchParams, setSearchParams] = useSearchParams()
 
-	const { filterSelected, setFilterSelected } = useContext(FilterContext)
+	const { filterFruitSelected, setFilterFruitSelected } =
+		useContext(FilterContext)
 
 	const navigate = useNavigate()
 
@@ -33,11 +34,11 @@ const FilterFruit = ({ fruitName }: TFilterFruitProps) => {
 		<Container typeContainer={'container-fruit-filter'}>
 			<small
 				className={`${removeSpaces(fruitName)}-filter${
-					filterSelected == fruitName ? `${' '}fruit-selected` : ''
+					filterFruitSelected == fruitName ? `${' '}fruit-selected` : ''
 				}`}
 				onClick={() => {
 					handleFruitFilter(fruitName)
-					setFilterSelected((prev: fruitEnum) => {
+					setFilterFruitSelected((prev: fruitEnum) => {
 						prev == fruitName ? (prev = fruitEnum.NONE) : (prev = fruitName)
 
 						return prev

@@ -2,7 +2,7 @@ import Container from './components/Container'
 import Header from './components/Header'
 import Navbar from './components/Navbar/Navbar'
 import { useLocation, Outlet } from 'react-router-dom'
-import endpoints from './constants/endpoints'
+import { endpoints } from './constants/endpoints'
 import ProductProvider from './contexts/ProductProvider'
 import FiltersProvider from './contexts/FiltersProvider'
 

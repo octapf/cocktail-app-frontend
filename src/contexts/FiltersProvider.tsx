@@ -1,22 +1,32 @@
 import { createContext, useMemo, useState } from 'react'
-import TFilterContext from '../types/TFilterContext'
+import { TFilterContext } from '../types/TFilterContext'
 import { alcoholEnum } from '../constants/alcoholEnum'
+import { fruitEnum } from '../constants/fruitEnum'
 
 export const FilterContext = createContext<TFilterContext>({
-	filterSelected: alcoholEnum.NONE,
-	setFilterSelected: () => {},
+	filterAlcoholSelected: alcoholEnum.NONE,
+	filterFruitSelected: fruitEnum.NONE,
+	setFilterAlcoholSelected: () => {},
+	setFilterFruitSelected: () => {},
 })
 
 type TProviderProps = { children: React.ReactNode }
 
 const FiltersProvider = ({ children }: TProviderProps) => {
-	const [filterSelected, setFilterSelected] = useState<alcoholEnum>(
-		alcoholEnum.NONE
+	const [filterAlcoholSelected, setFilterAlcoholSelected] =
+		useState<alcoholEnum>(alcoholEnum.NONE)
+	const [filterFruitSelected, setFilterFruitSelected] = useState<fruitEnum>(
+		fruitEnum.NONE
 	)
 
 	const providerValue = useMemo(
-		() => ({ filterSelected, setFilterSelected }),
-		[filterSelected]
+		() => ({
+			filterAlcoholSelected,
+			filterFruitSelected,
+			setFilterAlcoholSelected,
+			setFilterFruitSelected,
+		}),
+		[filterAlcoholSelected, filterFruitSelected]
 	)
 
 	return (

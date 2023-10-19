@@ -1,4 +1,4 @@
-import TContainer from '../types/TContainer'
+import { TContainer } from '../types/TContainer'
 import '../styles/container.css'
 
 const Container = ({ typeContainer, children, myStyle }: TContainer) => {

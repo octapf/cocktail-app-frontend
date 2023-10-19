@@ -1,4 +1,4 @@
-import TCard from '../../types/TCard'
+import { TCard } from '../../types/TCard'
 import Container from '../Container'
 
 const Card = ({ productName }: TCard) => {

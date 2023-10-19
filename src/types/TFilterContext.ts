@@ -1,8 +1,9 @@
 import { alcoholEnum } from '../constants/alcoholEnum'
+import { fruitEnum } from '../constants/fruitEnum'
 
-type TFilterContext = {
-	filterSelected: alcoholEnum
-	setFilterSelected: React.Dispatch<React.SetStateAction<alcoholEnum>>
+export type TFilterContext = {
+	filterAlcoholSelected: alcoholEnum
+	filterFruitSelected: fruitEnum
+	setFilterAlcoholSelected: React.Dispatch<React.SetStateAction<alcoholEnum>>
+	setFilterFruitSelected: React.Dispatch<React.SetStateAction<fruitEnum>>
 }
-
-export default TFilterContext

@@ -1,5 +1,3 @@
-type TCard = {
+export type TCard = {
 	productName: string
 }
-
-export default TCard

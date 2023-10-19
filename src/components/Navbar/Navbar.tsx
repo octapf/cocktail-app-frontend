@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import endpoints from '../../constants/endpoints'
+import { endpoints } from '../../constants/endpoints'
 import '../../styles/navbar.css'
 import SearchBar from './SearchBar'
 import { useRefInputFocus } from '../../hooks/useRefInputFocus'

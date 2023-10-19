@@ -4,8 +4,8 @@ import { removeSpaces } from '../../utils/removeSpaces'
 import { alcoholEnum } from '../../constants/alcoholEnum'
 import { FilterContext } from '../../contexts/FiltersProvider'
 import { useContext } from 'react'
-import endpoints from '../../constants/endpoints'
-import queryParams from '../../constants/queryParams'
+import { endpoints } from '../../constants/endpoints'
+import { queryParams } from '../../constants/queryParams'
 
 type TFilterAlcoholProps = {
 	alcoholName: alcoholEnum
@@ -14,7 +14,8 @@ type TFilterAlcoholProps = {
 const FilterAlcohol = ({ alcoholName }: TFilterAlcoholProps) => {
 	const [searchParams, setSearchParams] = useSearchParams()
 
-	const { filterSelected, setFilterSelected } = useContext(FilterContext)
+	const { filterAlcoholSelected, setFilterAlcoholSelected } =
+		useContext(FilterContext)
 
 	const navigate = useNavigate()
 
@@ -31,11 +32,11 @@ const FilterAlcohol = ({ alcoholName }: TFilterAlcoholProps) => {
 	return (
 		<small
 			className={`${removeSpaces(alcoholName)}-filter${
-				filterSelected == alcoholName ? `${' '}alcohol-selected` : ''
+				filterAlcoholSelected == alcoholName ? `${' '}alcohol-selected` : ''
 			}`}
 			onClick={() => {
 				handleAlcoholFilter(alcoholName)
-				setFilterSelected((prev: alcoholEnum) => {
+				setFilterAlcoholSelected((prev: alcoholEnum) => {
 					prev == alcoholName ? (prev = alcoholEnum.NONE) : (prev = alcoholName)
 
 					return prev
