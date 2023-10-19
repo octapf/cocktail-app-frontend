@@ -39,7 +39,11 @@ const FilterFruit = ({ fruitName }: TFilterFruitProps) => {
 				onClick={() => {
 					handleFruitFilter(fruitName)
 					setFilterFruitSelected((prev: fruitEnum) => {
-						prev == fruitName ? (prev = fruitEnum.NONE) : (prev = fruitName)
+						if (prev == fruitName) {
+							prev = fruitEnum.NONE
+						} else {
+							prev = fruitName
+						}
 
 						return prev
 					})

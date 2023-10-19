@@ -37,7 +37,11 @@ const FilterAlcohol = ({ alcoholName }: TFilterAlcoholProps) => {
 			onClick={() => {
 				handleAlcoholFilter(alcoholName)
 				setFilterAlcoholSelected((prev: alcoholEnum) => {
-					prev == alcoholName ? (prev = alcoholEnum.NONE) : (prev = alcoholName)
+					if (prev == alcoholName) {
+						prev = alcoholEnum.NONE
+					} else {
+						prev = alcoholName
+					}
 
 					return prev
 				})
