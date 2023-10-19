@@ -8,11 +8,11 @@ import { fruitEnum } from '../../constants/fruitEnum'
 import FilterFruit from './FilterFruit'
 
 type TSearchBarPros = {
-	isExpanded: boolean
+	isExpandedNavBar: boolean
 	searchInput: RefObject<HTMLInputElement>
 }
 
-const SearchBar = ({ isExpanded, searchInput }: TSearchBarPros) => {
+const SearchBar = ({ isExpandedNavBar, searchInput }: TSearchBarPros) => {
 	const [searchParams, setSearchParams] = useSearchParams()
 
 	const navigate = useNavigate()
@@ -29,7 +29,7 @@ const SearchBar = ({ isExpanded, searchInput }: TSearchBarPros) => {
 	}
 
 	return (
-		<div className={`container-filters ${!isExpanded ? 'hidden' : ''}`}>
+		<div className={`container-filters ${!isExpandedNavBar ? 'hidden' : ''}`}>
 			<div className='carousel alcohol-filter'>
 				<FilterAlcohol alcoholName={alcoholEnum.VODKA} />
 				<FilterAlcohol alcoholName={alcoholEnum.TEQUILA} />

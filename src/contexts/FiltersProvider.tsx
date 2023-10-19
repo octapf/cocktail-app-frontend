@@ -6,8 +6,10 @@ import { fruitEnum } from '../constants/fruitEnum'
 export const FilterContext = createContext<TFilterContext>({
 	filterAlcoholSelected: alcoholEnum.NONE,
 	filterFruitSelected: fruitEnum.NONE,
+	isExpandedNavBar: false,
 	setFilterAlcoholSelected: () => {},
 	setFilterFruitSelected: () => {},
+	setIsExpandedNavBar: () => {},
 })
 
 type TProviderProps = { children: React.ReactNode }
@@ -19,14 +21,18 @@ const FiltersProvider = ({ children }: TProviderProps) => {
 		fruitEnum.NONE
 	)
 
+	const [isExpandedNavBar, setIsExpandedNavBar] = useState(false)
+
 	const providerValue = useMemo(
 		() => ({
 			filterAlcoholSelected,
 			filterFruitSelected,
+			isExpandedNavBar,
 			setFilterAlcoholSelected,
 			setFilterFruitSelected,
+			setIsExpandedNavBar,
 		}),
-		[filterAlcoholSelected, filterFruitSelected]
+		[filterAlcoholSelected, filterFruitSelected, isExpandedNavBar]
 	)
 
 	return (

@@ -2,28 +2,31 @@ import { Link } from 'react-router-dom'
 import { endpoints } from '../../constants/endpoints'
 import '../../styles/navbar.css'
 import SearchBar from './SearchBar'
-import { useRefInputFocus } from '../../hooks/useRefInputFocus'
+import { useContext, useRef } from 'react'
+import { FilterContext } from '../../contexts/FiltersProvider'
 
 const NavBar = () => {
-	const {
-		expandNav: [isExpanded, setIsExpanded],
-		searchInput,
-	} = useRefInputFocus()
+	const { isExpandedNavBar, setIsExpandedNavBar } = useContext(FilterContext)
+
+	const searchInput = useRef<HTMLInputElement>(null)
 
 	const handleBlur = () => {
 		searchInput.current!.value = ''
-		setIsExpanded(false)
+		setIsExpandedNavBar(false)
 	}
 
 	const toogleExpand = () => {
-		setIsExpanded((prevValue) => {
+		setIsExpandedNavBar((prevValue: boolean) => {
 			return !prevValue
 		})
 	}
 
 	return (
-		<nav className={`navbar ${isExpanded ? 'navbar-expand' : ''}`}>
-			<SearchBar isExpanded={isExpanded} searchInput={searchInput} />
+		<nav className={`navbar ${isExpandedNavBar ? 'navbar-expand' : ''}`}>
+			<SearchBar
+				isExpandedNavBar={isExpandedNavBar}
+				searchInput={searchInput}
+			/>
 
 			<div className='navbar-links' onFocus={handleBlur}>
 				<Link to={endpoints.COCKTAIL_LIST}>
