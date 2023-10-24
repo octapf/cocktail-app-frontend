@@ -45,30 +45,6 @@
 	background-color: var(--color-six);
 }
 
-.alcohol-filter small {
-	display: flex;
-	min-width: 7rem;
-	min-height: 7rem;
-	font-size: 0.8rem;
-	border-radius: 100%;
-	text-align: center;
-	place-content: center;
-	align-items: center;
-	letter-spacing: 0.2rem;
-	background-color: var(--color-one);
-	transition: box-shadow 0.2s;
-}
-
-.alcohol-selected {
-	box-shadow: 0px -3px 0px var(--color-four) inset;
-	transition: box-shadow 0.2s;
-}
-
-.fruit-selected {
-	background-color: var(--color-one);
-	transition: box-shadow 0.2s;
-}
-
 .navbar-input-search {
 	background-color: var(--color-one);
 	color: var(--color-four);
@@ -106,17 +82,40 @@
 	-webkit-text-stroke-color: var(--color-four);
 }
 
+.alcohol-filter small {
+	display: flex;
+	min-width: 7rem;
+	min-height: 7rem;
+	font-size: 0.8rem;
+	border-radius: 100%;
+	text-align: center;
+	place-content: center;
+	align-items: center;
+	letter-spacing: 0.2rem;
+	background-color: var(--color-one);
+	transition: box-shadow 0.2s;
+}
+
+.alcohol-selected {
+	box-shadow: 0px -3px 0px var(--color-four) inset;
+	transition: box-shadow 0.2s;
+}
+
 .fruit-filter small {
+	display: flex;
 	min-width: 3rem;
 	min-height: 3rem;
+	text-align: center;
 	border-radius: 20%;
 	letter-spacing: 0.2rem;
-	transition: box-shadow 0.2s;
 	margin: 0.5rem;
-	/* filter: saturate(0); */
-	display: flex;
 	align-items: end;
-	text-align: center;
+	transition: background-color 0.2s;
+}
+
+.fruit-selected {
+	background-color: var(--color-one);
+	transition: background-color 0.2s;
 }
 
 .coconut-filter {
