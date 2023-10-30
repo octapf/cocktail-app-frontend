@@ -2,7 +2,7 @@ import { createContext, useEffect, useMemo, useState } from 'react'
 import { TProductContext } from '../types/TProductContext'
 import { TProduct } from '../types/TProduct'
 
-export const ProductContext = createContext<TProductContext>({
+export const ProductContext = createContext<TProductContext | null>({
 	products: [
 		{
 			_id: '',
