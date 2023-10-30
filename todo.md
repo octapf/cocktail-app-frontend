@@ -19,3 +19,4 @@ TODO add steps to make the cocktail?
 TODO add clip-path to navbar
 TODO isActive fruitFilter animation
 TODO fix bug apply navFilter when cardDetail
+TODO add youtube videos carousel
