@@ -20,3 +20,4 @@ TODO add clip-path to navbar
 TODO isActive fruitFilter animation
 TODO fix bug apply navFilter when cardDetail
 TODO add youtube videos carousel
+TODO make home animation & redirect to prodList?

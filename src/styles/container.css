@@ -16,6 +16,39 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	clip-path: inset(0px 0px 0px 0px);
+	-webkit-animation: slidein 100s;
+	animation: slidein 100s;
+
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+	from {
+		background-position: top;
+		background-size: 1500px;
+	}
+	to {
+		background-position: -80px 0px;
+		background-size: 1250px;
+	}
+}
+
+@keyframes slidein {
+	from {
+		background-position: top;
+		background-size: 1500px;
+	}
+	to {
+		background-position: -80px 0px;
+		background-size: 1250px;
+	}
 }
 
 .container-app {
