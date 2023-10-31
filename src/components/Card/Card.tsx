@@ -1,7 +1,7 @@
 import { TCard } from '../../types/TCard'
-import Container from '../Container'
+import Container from '../Container/Container'
 
-const Card = ({ productName }: TCard) => {
+export const Card = ({ productName }: TCard) => {
 	const productClass = productName.replace(/[\s&]/g, '').toLowerCase()
 
 	return (
@@ -13,5 +13,3 @@ const Card = ({ productName }: TCard) => {
 		</Container>
 	)
 }
-
-export default Card

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react'
 import { googleLogout, useGoogleLogin } from '@react-oauth/google'
-import Container from '../components/Container'
+import Container from '../components/Container/Container'
 
 const Profilepage = () => {
 	const [user, setUser] = useState<any>([])

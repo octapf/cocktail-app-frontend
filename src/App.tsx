@@ -1,5 +1,5 @@
-import Container from './components/Container'
-import Header from './components/Header'
+import Container from './components/Container/Container'
+import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
 import { useLocation, Outlet } from 'react-router-dom'
 import { endpoints } from './constants/endpoints'

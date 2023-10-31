@@ -1,7 +1,21 @@
-import Cardlist from '../components/Card/Cardlist'
+import { useProductContext } from '../hooks/useProductContext'
+import Container from '../components/Container/Container'
+import { useFilterProducts } from '../hooks/useFilterProduct'
 
-const ProductListpage = () => {
-	return <Cardlist />
+export const ProductListpage = () => {
+	const { products } = useProductContext()
+
+	const productsContent = useFilterProducts(products)
+
+	return (
+		<main className='main'>
+			{products.length < 1 ? (
+				<>Loading</>
+			) : (
+				<Container typeContainer={'container-cardlist'}>
+					{productsContent}
+				</Container>
+			)}
+		</main>
+	)
 }
-
-export default ProductListpage

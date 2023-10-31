@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { endpoints } from '../../constants/endpoints'
 import { queryParams } from '../../constants/queryParams'
 import { fruitEnum } from '../../constants/fruitEnum'
-import Container from '../Container'
+import Container from '../Container/Container'
 import { capitalize } from '../../utils/capitalize'
 
 type TFilterFruitProps = {

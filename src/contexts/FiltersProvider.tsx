@@ -3,7 +3,7 @@ import { TFilterContext } from '../types/TFilterContext'
 import { alcoholEnum } from '../constants/alcoholEnum'
 import { fruitEnum } from '../constants/fruitEnum'
 
-export const FilterContext = createContext<TFilterContext | null>({
+export const FilterContext = createContext<TFilterContext>({
 	filterAlcoholSelected: alcoholEnum.NONE,
 	filterFruitSelected: fruitEnum.NONE,
 	isExpandedNavBar: false,
