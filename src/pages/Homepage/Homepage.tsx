@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/logo-uh.svg'
-import { endpoints } from '../constants/endpoints'
-import Container from '../components/Container/Container'
+import logo from '../../assets/logo-uh.svg'
+import { endpoints } from '../../constants/endpoints'
+import Container from '../../components/Container/Container'
 
 const Homepage = () => {
 	return (
