@@ -1,5 +1,4 @@
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { GoogleOAuthProvider } from '@react-oauth/google'
@@ -11,14 +10,21 @@ import { ProductListpage } from './pages/ProductListpage.tsx'
 import { ProductDetailpage } from './pages/ProductDetailpage.tsx'
 import Profilepage from './pages/Profilepage.tsx'
 import Favoritespage from './pages/Favoritespage.tsx'
+import ProductProvider from './contexts/ProductProvider.tsx'
+import FiltersProvider from './contexts/FiltersProvider.tsx'
+import { App } from './App.tsx'
 
 const router = createBrowserRouter([
+	{
+		path: endpoints.HOME,
+		element: <Homepage />,
+		errorElement: <Errorpage />,
+	},
 	{
 		path: endpoints.HOME,
 		element: <App />,
 		errorElement: <Errorpage />,
 		children: [
-			{ path: endpoints.HOME, element: <Homepage /> },
 			{ path: endpoints.COCKTAIL_LIST, element: <ProductListpage /> },
 			{ path: endpoints.COCKTAIL, element: <ProductDetailpage /> },
 			{ path: endpoints.PROFILE, element: <Profilepage /> },
@@ -28,9 +34,13 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-	<GoogleOAuthProvider clientId='370152876277-6ert57it0lm7dt6bmphejdmqvsgcphk9.apps.googleusercontent.com'>
-		<React.StrictMode>
-			<RouterProvider router={router}></RouterProvider>
-		</React.StrictMode>
-	</GoogleOAuthProvider>
+	<React.StrictMode>
+		<GoogleOAuthProvider clientId='370152876277-6ert57it0lm7dt6bmphejdmqvsgcphk9.apps.googleusercontent.com'>
+			<ProductProvider>
+				<FiltersProvider>
+					<RouterProvider router={router} />
+				</FiltersProvider>
+			</ProductProvider>
+		</GoogleOAuthProvider>
+	</React.StrictMode>
 )

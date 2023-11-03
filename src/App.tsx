@@ -1,34 +1,14 @@
 import Container from './components/Container/Container'
 import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
-import { useLocation, Outlet } from 'react-router-dom'
-import { endpoints } from './constants/endpoints'
-import ProductProvider from './contexts/ProductProvider'
-import FiltersProvider from './contexts/FiltersProvider'
+import { Outlet } from 'react-router-dom'
 
-function App() {
-	const location = useLocation()
-
+export function App() {
 	return (
-		<ProductProvider>
-			<FiltersProvider>
-				{location.pathname == endpoints.HOME ? (
-					<>
-						<div className='background-home'></div>
-						<Container typeContainer='contanier-logo'>
-							<Outlet />
-						</Container>
-					</>
-				) : (
-					<Container typeContainer={'container-app'}>
-						<Header />
-						<Outlet />
-						<Navbar />
-					</Container>
-				)}
-			</FiltersProvider>
-		</ProductProvider>
+		<Container typeContainer={'container-app'}>
+			<Header />
+			<Outlet />
+			<Navbar />
+		</Container>
 	)
 }
-
-export default App
