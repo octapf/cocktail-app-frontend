@@ -1,11 +1,11 @@
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { capitalize } from '../../utils/capitalize'
-import { removeSpaces } from '../../utils/removeSpaces'
-import { alcoholEnum } from '../../constants/alcoholEnum'
-import { FilterContext } from '../../contexts/FiltersProvider'
+import { capitalize } from '../../../utils/capitalize'
+import { removeSpaces } from '../../../utils/removeSpaces'
+import { alcoholEnum } from '../../../constants/alcoholEnum'
+import { FilterContext } from '../../../contexts/FiltersProvider'
 import { useContext } from 'react'
-import { endpoints } from '../../constants/endpoints'
-import { queryParams } from '../../constants/queryParams'
+import { endpoints } from '../../../constants/endpoints'
+import { queryParams } from '../../../constants/queryParams'
 
 type TFilterAlcoholProps = {
 	alcoholName: alcoholEnum

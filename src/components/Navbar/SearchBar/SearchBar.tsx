@@ -1,10 +1,10 @@
 import { RefObject } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { alcoholEnum } from '../../constants/alcoholEnum'
+import { alcoholEnum } from '../../../constants/alcoholEnum'
 import FilterAlcohol from './FilterAlcohol'
-import { endpoints } from '../../constants/endpoints'
-import { queryParams } from '../../constants/queryParams'
-import { fruitEnum } from '../../constants/fruitEnum'
+import { endpoints } from '../../../constants/endpoints'
+import { queryParams } from '../../../constants/queryParams'
+import { fruitEnum } from '../../../constants/fruitEnum'
 import FilterFruit from './FilterFruit'
 
 type TSearchBarPros = {

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { endpoints } from '../../constants/endpoints'
 import '../../styles/navbar.css'
-import SearchBar from './SearchBar'
+import SearchBar from './SearchBar/SearchBar'
 import { useContext, useRef } from 'react'
 import { FilterContext } from '../../contexts/FiltersProvider'
 
@@ -22,7 +22,10 @@ const NavBar = () => {
 	}
 
 	return (
-		<nav className={`navbar ${isExpandedNavBar ? 'navbar-expand' : ''}`}>
+		<nav
+			data-testid={'nav'}
+			className={`navbar ${isExpandedNavBar ? 'navbar-expand' : ''}`}
+		>
 			<SearchBar
 				isExpandedNavBar={isExpandedNavBar}
 				searchInput={searchInput}
@@ -35,7 +38,11 @@ const NavBar = () => {
 				<Link to={endpoints.FAVORITES}>
 					<i className='fa-solid fa-heart'></i>
 				</Link>
-				<div onClick={toogleExpand} className='search-button'>
+				<div
+					onClick={toogleExpand}
+					className='search-button'
+					data-testid={'loupe'}
+				>
 					<i className='fa-solid fa-magnifying-glass'></i>
 				</div>
 				<Link to={endpoints.PROFILE}>

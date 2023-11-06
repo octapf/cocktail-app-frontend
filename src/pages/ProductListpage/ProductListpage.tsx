@@ -1,6 +1,6 @@
-import { useProductContext } from '../hooks/useProductContext'
-import Container from '../components/Container/Container'
-import { useFilterProducts } from '../hooks/useFilterProduct'
+import { useProductContext } from '../../hooks/useProductContext'
+import Container from '../../components/Container/Container'
+import { useFilterProducts } from '../../hooks/useFilterProduct'
 
 export const ProductListpage = () => {
 	const { products } = useProductContext()
