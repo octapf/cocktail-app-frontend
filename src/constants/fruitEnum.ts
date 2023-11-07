@@ -1,4 +1,4 @@
-export enum fruitEnum {
+export enum FRUIT {
 	COCONUT = 'coconut',
 	PEACH = 'peach',
 	ORANGE = 'orange',

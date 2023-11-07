@@ -1,8 +1,8 @@
+import { useContext, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { endpoints } from '../../constants/endpoints'
+import { ENDPOINTS } from '../../constants/endpoints'
 import '../../styles/navbar.css'
 import SearchBar from './SearchBar/SearchBar'
-import { useContext, useRef } from 'react'
 import { FilterContext } from '../../contexts/FiltersProvider'
 
 const NavBar = () => {
@@ -16,14 +16,12 @@ const NavBar = () => {
 	}
 
 	const toogleExpand = () => {
-		setIsExpandedNavBar((prevValue: boolean) => {
-			return !prevValue
-		})
+		setIsExpandedNavBar((prevValue: boolean) => !prevValue)
 	}
 
 	return (
 		<nav
-			data-testid={'nav'}
+			data-testid='nav'
 			className={`navbar ${isExpandedNavBar ? 'navbar-expand' : ''}`}
 		>
 			<SearchBar
@@ -32,21 +30,24 @@ const NavBar = () => {
 			/>
 
 			<div className='navbar-links' onFocus={handleBlur}>
-				<Link to={endpoints.COCKTAIL_LIST}>
-					<i className='fa-solid fa-house'></i>
+				<Link to={ENDPOINTS.COCKTAIL_LIST}>
+					<i className='fa-solid fa-house' />
 				</Link>
-				<Link to={endpoints.FAVORITES}>
-					<i className='fa-solid fa-heart'></i>
+				<Link to={ENDPOINTS.FAVORITES}>
+					<i className='fa-solid fa-heart' />
 				</Link>
-				<div
+				<button
+					type='button'
+					onKeyDown={toogleExpand}
+					tabIndex={0}
 					onClick={toogleExpand}
 					className='search-button'
-					data-testid={'loupe'}
+					data-testid='loupe'
 				>
-					<i className='fa-solid fa-magnifying-glass'></i>
-				</div>
-				<Link to={endpoints.PROFILE}>
-					<i className='fa-regular fa-user'></i>
+					<i className='fa-solid fa-magnifying-glass' />
+				</button>
+				<Link to={ENDPOINTS.PROFILE}>
+					<i className='fa-regular fa-user' />
 				</Link>
 			</div>
 		</nav>

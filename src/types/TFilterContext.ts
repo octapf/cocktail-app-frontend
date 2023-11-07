@@ -1,11 +1,11 @@
-import { alcoholEnum } from '../constants/alcoholEnum'
-import { fruitEnum } from '../constants/fruitEnum'
+import { ALCOHOL } from '../constants/alcoholEnum'
+import { FRUIT } from '../constants/fruitEnum'
 
 export type TFilterContext = {
-	filterAlcoholSelected: alcoholEnum
-	filterFruitSelected: fruitEnum
+	filterAlcoholSelected: ALCOHOL
+	filterFruitSelected: FRUIT
 	isExpandedNavBar: boolean
-	setFilterAlcoholSelected: React.Dispatch<React.SetStateAction<alcoholEnum>>
-	setFilterFruitSelected: React.Dispatch<React.SetStateAction<fruitEnum>>
+	setFilterAlcoholSelected: React.Dispatch<React.SetStateAction<ALCOHOL>>
+	setFilterFruitSelected: React.Dispatch<React.SetStateAction<FRUIT>>
 	setIsExpandedNavBar: React.Dispatch<React.SetStateAction<boolean>>
 }

@@ -1,4 +1,4 @@
-export enum alcoholEnum {
+export enum ALCOHOL {
 	VODKA = 'vodka',
 	TEQUILA = 'tequila',
 	LIGHT_RUM = 'light rum',

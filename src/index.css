@@ -58,29 +58,9 @@ small::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-button {
-	border-radius: 8px;
-	border: 1px solid transparent;
-	font-size: 1em;
-	background-color: var(--color-four);
-	cursor: pointer;
-	transition: border-color 0.25s;
-}
-button:hover {
-	border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
-}
-
 @media (prefers-color-scheme: light) {
 	:root {
 		color: #213547;
 		background-color: #ffffff;
-	}
-
-	button {
-		background-color: #f9f9f9;
 	}
 }

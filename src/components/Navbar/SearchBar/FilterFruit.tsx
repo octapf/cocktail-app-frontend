@@ -1,15 +1,15 @@
+import { useContext } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { removeSpaces } from '../../../utils/removeSpaces'
 import { FilterContext } from '../../../contexts/FiltersProvider'
-import { useContext } from 'react'
-import { endpoints } from '../../../constants/endpoints'
-import { queryParams } from '../../../constants/queryParams'
-import { fruitEnum } from '../../../constants/fruitEnum'
+import { ENDPOINTS } from '../../../constants/endpoints'
+import { QUERYPARAMS } from '../../../constants/queryParams'
+import { FRUIT } from '../../../constants/fruitEnum'
 import Container from '../../Container/Container'
 import { capitalize } from '../../../utils/capitalize'
 
 type TFilterFruitProps = {
-	fruitName: fruitEnum
+	fruitName: FRUIT
 }
 
 const FilterFruit = ({ fruitName }: TFilterFruitProps) => {
@@ -20,35 +20,34 @@ const FilterFruit = ({ fruitName }: TFilterFruitProps) => {
 
 	const navigate = useNavigate()
 
-	const handleFruitFilter = (fruit: fruitEnum) => {
-		navigate(endpoints.COCKTAIL_LIST)
-		if (searchParams.get(queryParams.FRUIT) == fruit) {
-			searchParams.delete(queryParams.FRUIT)
+	const handleFruitFilter = (fruit: FRUIT) => {
+		navigate(ENDPOINTS.COCKTAIL_LIST)
+		if (searchParams.get(QUERYPARAMS.FRUIT) === fruit) {
+			searchParams.delete(QUERYPARAMS.FRUIT)
 		} else {
-			searchParams.set(queryParams.FRUIT, fruit)
+			searchParams.set(QUERYPARAMS.FRUIT, fruit)
 		}
 		setSearchParams(searchParams)
 	}
 
 	return (
-		<Container typeContainer={'container-fruit-filter'}>
-			<small
+		<Container typeContainer='container-fruit-filter'>
+			<button
+				type='button'
+				aria-label='fruit-filter'
 				className={`${removeSpaces(fruitName)}-filter${
-					filterFruitSelected == fruitName ? `${' '}fruit-selected` : ''
+					filterFruitSelected === fruitName ? `${' '}fruit-selected` : ''
 				}`}
 				onClick={() => {
 					handleFruitFilter(fruitName)
-					setFilterFruitSelected((prev: fruitEnum) => {
-						if (prev == fruitName) {
-							prev = fruitEnum.NONE
-						} else {
-							prev = fruitName
+					setFilterFruitSelected((prev: FRUIT) => {
+						if (prev === fruitName) {
+							return FRUIT.NONE
 						}
-
-						return prev
+						return fruitName
 					})
 				}}
-			></small>
+			/>
 			{capitalize(fruitName)}
 		</Container>
 	)

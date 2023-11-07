@@ -3,8 +3,6 @@ import { useRouteError, isRouteErrorResponse } from 'react-router-dom'
 const ErrorPage = () => {
 	const error = useRouteError()
 
-	console.error(error)
-
 	if (isRouteErrorResponse(error)) {
 		return (
 			<div id='error-page'>
@@ -17,7 +15,8 @@ const ErrorPage = () => {
 				)}
 			</div>
 		)
-	} else if (error instanceof Error) {
+	}
+	if (error instanceof Error) {
 		return (
 			<div id='error-page'>
 				<h1>Oops! Unexpected Error</h1>
@@ -27,9 +26,8 @@ const ErrorPage = () => {
 				</p>
 			</div>
 		)
-	} else {
-		return <></>
 	}
+	return <>Error</>
 }
 
 export default ErrorPage

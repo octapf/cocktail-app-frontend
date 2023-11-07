@@ -12,7 +12,7 @@ export const ProductListpage = () => {
 			{products.length < 1 ? (
 				<>Loading</>
 			) : (
-				<Container typeContainer={'container-cardlist'}>
+				<Container typeContainer='container-cardlist'>
 					{productsContent}
 				</Container>
 			)}

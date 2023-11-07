@@ -10,11 +10,11 @@ export const ProductDetailpage = () => {
 
 	let filteredProduct
 	if (id && products.length > 1) {
-		filteredProduct = products.filter((prod) => prod._id == id)[0]
+		;[filteredProduct] = products.filter((prod) => prod._id === id)
 
 		const productIngredients = filteredProduct.ingredients.map(
 			(ingredient: TIngredients) => (
-				<small className={'ingredient-text'} key={ingredient._id}>
+				<small className='ingredient-text' key={ingredient._id}>
 					{ingredient.quantity} {ingredient.name}
 				</small>
 			)
@@ -29,16 +29,13 @@ export const ProductDetailpage = () => {
 				<h1 className='card-detail-maintitle'>
 					{filteredProduct.name.toUpperCase()}
 				</h1>
-				<div className={'history-container'}>
-					<small
-						className={'card-detail-history'}
-					>{`"${filteredProduct.history}"`}</small>
+				<div className='history-container'>
+					<small className='card-detail-history'>{`"${filteredProduct.history}"`}</small>
 				</div>
-				<h4 className={'card-detail-title'}>INGREDIENTS</h4>
-				<small className={'card-detail-ingredients'}>
-					{productIngredients}
-				</small>
+				<h4 className='card-detail-title'>INGREDIENTS</h4>
+				<small className='card-detail-ingredients'>{productIngredients}</small>
 			</Container>
 		)
 	}
+	return <>Loading</>
 }

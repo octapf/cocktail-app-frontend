@@ -3,32 +3,32 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import React from 'react'
-import { endpoints } from './constants/endpoints.ts'
-import Errorpage from './pages/Errorpage.tsx'
-import Homepage from './pages/Homepage/Homepage.tsx'
-import { ProductListpage } from './pages/ProductListpage/ProductListpage.tsx'
-import { ProductDetailpage } from './pages/ProductDetailpage.tsx'
-import Profilepage from './pages/Profilepage.tsx'
-import Favoritespage from './pages/Favoritespage.tsx'
-import ProductProvider from './contexts/ProductProvider.tsx'
-import FiltersProvider from './contexts/FiltersProvider.tsx'
-import { App } from './App.tsx'
+import { ENDPOINTS } from './constants/endpoints'
+import Errorpage from './pages/Errorpage'
+import Homepage from './pages/Homepage/Homepage'
+import { ProductListpage } from './pages/ProductListpage/ProductListpage'
+import { ProductDetailpage } from './pages/ProductDetailpage'
+import Profilepage from './pages/Profilepage'
+import Favoritespage from './pages/Favoritespage'
+import ProductProvider from './contexts/ProductProvider'
+import FiltersProvider from './contexts/FiltersProvider'
+import { App } from './App'
 
 const router = createBrowserRouter([
 	{
-		path: endpoints.HOME,
+		path: ENDPOINTS.HOME,
 		element: <Homepage />,
 		errorElement: <Errorpage />,
 	},
 	{
-		path: endpoints.HOME,
+		path: ENDPOINTS.HOME,
 		element: <App />,
 		errorElement: <Errorpage />,
 		children: [
-			{ path: endpoints.COCKTAIL_LIST, element: <ProductListpage /> },
-			{ path: endpoints.COCKTAIL, element: <ProductDetailpage /> },
-			{ path: endpoints.PROFILE, element: <Profilepage /> },
-			{ path: endpoints.FAVORITES, element: <Favoritespage /> },
+			{ path: ENDPOINTS.COCKTAIL_LIST, element: <ProductListpage /> },
+			{ path: ENDPOINTS.COCKTAIL, element: <ProductDetailpage /> },
+			{ path: ENDPOINTS.PROFILE, element: <Profilepage /> },
+			{ path: ENDPOINTS.FAVORITES, element: <Favoritespage /> },
 		],
 	},
 ])

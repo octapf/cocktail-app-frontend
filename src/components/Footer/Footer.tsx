@@ -1,6 +1,5 @@
 import '../../styles/footer.css'
-const Footer = () => {
-	return <footer role='footer' className='footer'></footer>
-}
+
+const Footer = () => <footer className='footer' />
 
 export default Footer

@@ -1,11 +1,11 @@
 import { screen, render, waitFor, act } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { vi } from 'vitest'
+// import { vi } from 'vitest'
 import '@testing-library/dom'
 import { BrowserRouter } from 'react-router-dom'
 import NavBar from './Navbar'
 
-const mockClick = vi.fn()
+// const mockClick = vi.fn()
 
 describe('Navbar', async () => {
 	beforeEach(() => {

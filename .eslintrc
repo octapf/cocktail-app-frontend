@@ -1,0 +1,33 @@
+{
+	"root": true,
+	"env": { "browser": true, "es2020": true },
+	"extends": [
+		"airbnb",
+		"airbnb-typescript",
+		"airbnb/hooks",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"ignorePatterns": ["dist", ".eslintrc.cjs"],
+	"parserOptions": {
+		"parser": "@typescript-eslint/parser",
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["react-refresh", "@typescript-eslint"],
+	"rules": {
+		"no-underscore-dangle": 0,
+		"react/react-in-jsx-scope": 0,
+		"no-unused-vars": 2,
+		"@typescript-eslint/no-unused-vars": 2,
+		"import/prefer-default-export": 0,
+		"react/function-component-definition": 0,
+		"react/jsx-props-no-spreading": 0,
+		"react/require-default-props": 0,
+		"import/no-absolute-path": 0,
+		"react-refresh/only-export-components": [
+			"warn",
+			{ "allowConstantExport": true }
+		]
+	}
+}

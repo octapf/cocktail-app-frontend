@@ -1,10 +1,10 @@
 import { RefObject } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { alcoholEnum } from '../../../constants/alcoholEnum'
-import FilterAlcohol from './FilterAlcohol'
-import { endpoints } from '../../../constants/endpoints'
-import { queryParams } from '../../../constants/queryParams'
-import { fruitEnum } from '../../../constants/fruitEnum'
+import { ALCOHOL } from '../../../constants/alcoholEnum'
+import { FilterAlcohol } from './FilterAlcohol'
+import { ENDPOINTS } from '../../../constants/endpoints'
+import { QUERYPARAMS } from '../../../constants/queryParams'
+import { FRUIT } from '../../../constants/fruitEnum'
 import FilterFruit from './FilterFruit'
 
 type TSearchBarPros = {
@@ -18,12 +18,12 @@ const SearchBar = ({ isExpandedNavBar, searchInput }: TSearchBarPros) => {
 	const navigate = useNavigate()
 
 	const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		navigate(endpoints.COCKTAIL_LIST)
+		navigate(ENDPOINTS.COCKTAIL_LIST)
 		if (e.target.value === '') {
-			searchParams.delete(queryParams.SEARCH)
+			searchParams.delete(QUERYPARAMS.SEARCH)
 			setSearchParams(searchParams)
 		} else {
-			searchParams.set(queryParams.SEARCH, e.target.value)
+			searchParams.set(QUERYPARAMS.SEARCH, e.target.value)
 			setSearchParams(searchParams)
 		}
 	}
@@ -31,26 +31,26 @@ const SearchBar = ({ isExpandedNavBar, searchInput }: TSearchBarPros) => {
 	return (
 		<div className={`container-filters ${!isExpandedNavBar ? 'hidden' : ''}`}>
 			<div className='carousel alcohol-filter'>
-				<FilterAlcohol alcoholName={alcoholEnum.VODKA} />
-				<FilterAlcohol alcoholName={alcoholEnum.TEQUILA} />
-				<FilterAlcohol alcoholName={alcoholEnum.LIGHT_RUM} />
-				<FilterAlcohol alcoholName={alcoholEnum.WHISKY} />
-				<FilterAlcohol alcoholName={alcoholEnum.GIN} />
-				<FilterAlcohol alcoholName={alcoholEnum.TRIPLE_SEC} />
-				<FilterAlcohol alcoholName={alcoholEnum.CACHAÇA} />
+				<FilterAlcohol alcoholName={ALCOHOL.VODKA} />
+				<FilterAlcohol alcoholName={ALCOHOL.TEQUILA} />
+				<FilterAlcohol alcoholName={ALCOHOL.LIGHT_RUM} />
+				<FilterAlcohol alcoholName={ALCOHOL.WHISKY} />
+				<FilterAlcohol alcoholName={ALCOHOL.GIN} />
+				<FilterAlcohol alcoholName={ALCOHOL.TRIPLE_SEC} />
+				<FilterAlcohol alcoholName={ALCOHOL.CACHAÇA} />
 			</div>
 			<div className='carousel fruit-filter'>
-				<FilterFruit fruitName={fruitEnum.COCONUT} />
-				<FilterFruit fruitName={fruitEnum.PEACH} />
-				<FilterFruit fruitName={fruitEnum.ORANGE} />
-				<FilterFruit fruitName={fruitEnum.TOMATO} />
-				<FilterFruit fruitName={fruitEnum.MINT} />
-				<FilterFruit fruitName={fruitEnum.PINEAPPLE} />
-				<FilterFruit fruitName={fruitEnum.LEMON} />
-				<FilterFruit fruitName={fruitEnum.LIME} />
+				<FilterFruit fruitName={FRUIT.COCONUT} />
+				<FilterFruit fruitName={FRUIT.PEACH} />
+				<FilterFruit fruitName={FRUIT.ORANGE} />
+				<FilterFruit fruitName={FRUIT.TOMATO} />
+				<FilterFruit fruitName={FRUIT.MINT} />
+				<FilterFruit fruitName={FRUIT.PINEAPPLE} />
+				<FilterFruit fruitName={FRUIT.LEMON} />
+				<FilterFruit fruitName={FRUIT.LIME} />
 			</div>
 			<input
-				className={`navbar-input-search`}
+				className='navbar-input-search'
 				ref={searchInput}
 				type='text'
 				name='searchInput'

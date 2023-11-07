@@ -1,15 +1,15 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { TProduct } from '../types/TProduct'
 import { Card } from '../components/Card/Card'
-import { endpoints } from '../constants/endpoints'
-import { queryParams } from '../constants/queryParams'
+import { ENDPOINTS } from '../constants/endpoints'
+import { QUERYPARAMS } from '../constants/queryParams'
 
 export const useFilterProducts = (products: TProduct[]) => {
 	const [searchParams] = useSearchParams()
 
-	const searchParam = searchParams.get(queryParams.SEARCH)
-	const alcoholParam = searchParams.get(queryParams.ALCOHOL)
-	const fruitParam = searchParams.get(queryParams.FRUIT)
+	const searchParam = searchParams.get(QUERYPARAMS.SEARCH)
+	const alcoholParam = searchParams.get(QUERYPARAMS.ALCOHOL)
+	const fruitParam = searchParams.get(QUERYPARAMS.FRUIT)
 
 	let productsContent = products
 
@@ -35,13 +35,11 @@ export const useFilterProducts = (products: TProduct[]) => {
 		)
 	}
 
-	const result = productsContent?.map((prod: TProduct) => {
-		return (
-			<Link key={prod._id} to={`${endpoints.COCKTAIL_LIST}/${prod._id}`}>
-				<Card productName={prod.name} />
-			</Link>
-		)
-	})
+	const result = productsContent?.map((prod: TProduct) => (
+		<Link key={prod._id} to={`${ENDPOINTS.COCKTAIL_LIST}/${prod._id}`}>
+			<Card productName={prod.name} />
+		</Link>
+	))
 
 	return result
 }

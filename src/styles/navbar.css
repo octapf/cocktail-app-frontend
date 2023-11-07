@@ -40,9 +40,16 @@
 	display: none;
 }
 
-.carousel small:hover {
+.carousel button:hover {
 	cursor: pointer;
 	background-color: var(--color-six);
+}
+.search-button {
+	border-style: none;
+	background-color: transparent;
+	color: var(--color-four);
+	font-size: 1.3rem;
+	cursor: pointer;
 }
 
 .navbar-input-search {
@@ -82,12 +89,14 @@
 	-webkit-text-stroke-color: var(--color-four);
 }
 
-.alcohol-filter small {
+.alcohol-filter button {
+	color: var(--color-four);
 	display: flex;
 	min-width: 7rem;
 	min-height: 7rem;
 	font-size: 0.8rem;
 	border-radius: 100%;
+	border-style: none;
 	text-align: center;
 	place-content: center;
 	align-items: center;
@@ -101,7 +110,7 @@
 	transition: box-shadow 0.2s;
 }
 
-.fruit-filter small {
+.fruit-filter button {
 	display: flex;
 	min-width: 3rem;
 	min-height: 3rem;
@@ -110,12 +119,14 @@
 	letter-spacing: 0.2rem;
 	margin: 0.5rem;
 	align-items: end;
-	transition: background-color 0.2s;
+	border-style: none;
+	background-color: var(--color-one);
+	transition: box-shadow 0.2s;
 }
 
 .fruit-selected {
-	background-color: var(--color-one);
-	transition: background-color 0.2s;
+	box-shadow: 0px -2px 0px var(--color-four) inset;
+	transition: box-shadow 0.2s;
 }
 
 .coconut-filter {

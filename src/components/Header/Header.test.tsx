@@ -1,15 +1,13 @@
+import { BrowserRouter } from 'react-router-dom'
 import { render, screen } from '@testing-library/react'
 import Header from './Header'
-import { BrowserRouter } from 'react-router-dom'
 
 describe('Header', () => {
-	const MockHeader = () => {
-		return (
-			<BrowserRouter>
-				<Header />
-			</BrowserRouter>
-		)
-	}
+	const MockHeader = () => (
+		<BrowserRouter>
+			<Header />
+		</BrowserRouter>
+	)
 
 	beforeEach(() => {
 		render(<MockHeader />)

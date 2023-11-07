@@ -9,14 +9,12 @@ const Profilepage = () => {
 
 	const login = useGoogleLogin({
 		onSuccess: (codeResponse) => setUser(codeResponse),
-		onError: (error) => console.log('Login Failed:', error),
+		onError: (error) => console.error('Login Failed:', error),
 	})
 
 	useEffect(() => {
 		if (user.access_token) {
 			const fetchUser = async () => {
-				console.log(user)
-
 				const response = await fetch(
 					`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
 					{
@@ -28,13 +26,12 @@ const Profilepage = () => {
 				)
 
 				const data = await response.json()
-				console.log(data)
 
 				return data
 			}
 
-			fetchUser().then((user) => {
-				setProfile(user)
+			fetchUser().then((fetchedUser) => {
+				setProfile(fetchedUser)
 			})
 		}
 	}, [user])
@@ -45,23 +42,27 @@ const Profilepage = () => {
 	}
 	return (
 		<div>
-			<Container typeContainer={'container-profile'}>
+			<Container typeContainer='container-profile'>
 				<div>
 					<h2>React Google Login</h2>
 					<br />
 					<br />
 					{profile ? (
 						<div>
-							<img src={profile.picture} alt='user image' />
+							<img src={profile.picture} alt='user' />
 							<h3>User Logged in</h3>
 							<p>Name: {profile.name}</p>
 							<p>Email Address: {profile.email}</p>
 							<br />
 							<br />
-							<button onClick={logOut}>Log out</button>
+							<button type='button' onClick={logOut}>
+								Log out
+							</button>
 						</div>
 					) : (
-						<button onClick={() => login()}>Sign in with Google 🚀 </button>
+						<button type='button' onClick={() => login()}>
+							Sign in with Google 🚀{' '}
+						</button>
 					)}
 				</div>
 			</Container>

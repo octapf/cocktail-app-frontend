@@ -6,8 +6,8 @@ export const Card = ({ productName }: TCard) => {
 
 	return (
 		<Container typeContainer={`container-card ${productClass}`}>
-			<div className='background-infocard'></div>
-			<Container typeContainer={'container-infocard'}>
+			<div className='background-infocard' />
+			<Container typeContainer='container-infocard'>
 				<h5>{productName}</h5>
 			</Container>
 		</Container>
